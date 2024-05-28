@@ -6,8 +6,14 @@ document.addEventListener('DOMContentLoaded', function() {
     navButtons.forEach((button, index) => {
         button.addEventListener('click', () => {
             console.log(`Navigation Button ${index + 1} clicked`);
-            // Add your logic for each button click here
         });
+
+        if (button.id === 'signin-button') {
+            button.addEventListener('click', () => {
+                console.log('Sign In button clicked');
+                window.location.href = 'signin.html'; // Navigate to the sign-in page
+            });
+        }
     });
 
     // Select the 'Explore Now' button
@@ -17,5 +23,6 @@ document.addEventListener('DOMContentLoaded', function() {
     exploreButton.addEventListener('click', () => {
         console.log('Explore Now button clicked');
         // Add your logic for this button click here
+
     });
 });
