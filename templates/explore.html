@@ -20,7 +20,11 @@
         <h2> {{business["name"]}} </h2>
         <img src={{business["image_url"]}}>
         <li> Rating: {{business["rating"]}} </li>
-        <li> {{business["location"]["display_address"]}} </li>
+
+        {% for info in business["location"]["display_address"] %}
+        <li> {{info}} </li>
+        {% endfor %}
+        
     {% endfor %}
 
     <!--

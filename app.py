@@ -12,7 +12,8 @@ def index():
 @app.route("/explore", methods=["GET"])
 def explore():
     # get info from form
-    # display info
+    # pass it to the API
+    # Render that on the page
     return render_template("explore.html", businesses=businesses)
 
 if __name__ == "__main__":
