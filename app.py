@@ -9,11 +9,13 @@ def index():
     return render_template("index.html")
 
 
-@app.route("/explore", methods=["GET"])
+@app.route("/explore", methods=["GET", "POST"])
 def explore():
-    # get info from form
-    # pass it to the API
-    # Render that on the page
+    if request.method == 'POST':
+        # get info from form
+        location = request.form['location']
+        # pass it to the API
+        # businesses = func(location)
     return render_template("explore.html", businesses=businesses)
 
 if __name__ == "__main__":
