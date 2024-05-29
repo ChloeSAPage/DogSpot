@@ -14,4 +14,11 @@ result = response.json()
 businesses = result["businesses"]
 
 for business in businesses:
-    print(business["name"])
+    #print(business["name"])
+    print(business)
+
+    # Name
+    # Location
+    # rating
+    # coordinates
+    # display_address
