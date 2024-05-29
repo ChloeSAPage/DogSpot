@@ -14,11 +14,14 @@ result = response.json()
 businesses = result["businesses"]
 
 for business in businesses:
-    #print(business["name"])
-    print(business)
+    # print(business["name"])
+    # print(f"{business.keys()} \n")
+    print(f"{business["coordinates"]} \n")
 
     # Name
-    # Location
     # rating
     # coordinates
     # display_address
+
+    # All the info we can use
+    # dict_keys(['id', 'alias', 'name', 'image_url', 'is_closed', 'url', 'review_count', 'categories', 'rating', 'coordinates', 'transactions', 'price', 'location', 'phone', 'display_phone', 'distance', 'attributes'])

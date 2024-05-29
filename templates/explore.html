@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore</title>
+</head>
+
+<body>
+
+    <form action="submit">
+        <input class="form-control" type="text" id="location" name="location" required>
+        <button>Submit</button>
+    </form>
+
+    <!-- Render the Information from API-->
+
+    {% for business in businesses %}
+        <h2> {{business["name"]}} </h2>
+        <img src={{business["image_url"]}}>
+        <li> Rating: {{business["rating"]}} </li>
+        <li> {{business["location"]["display_address"]}} </li>
+    {% endfor %}
+
+    <!--
+        If you want to get the lat long it will be:
+        lat = business["coordinates"]["latitude"]
+        long = business["coordinates"]["longitude"]
+    -->
+</body>
+
+</html>
