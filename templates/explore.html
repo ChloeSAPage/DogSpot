@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<header class="header">
+    <img src="static/images/logo.png" alt="Logo" class="logo">
+    <div class="button-bar">
+        <button class="nav-button" id="home-button">Home</button>
+        <button class="nav-button" id="explore-button">Explore</button>
+        <button class="nav-button" id="contact-button">Contact</button>
+        <button class="nav-button" id="signin-button">Sign in</button>
+    </div>
+</header>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" href="static/css/homepage.css">
     <title>Explore</title>
 </head>
 
 <body>
 
-    <form action="submit">
+    <form action="explore" method="post">
         <input class="form-control" type="text" id="location" name="location" required>
         <button>Submit</button>
     </form>
@@ -32,6 +42,7 @@
         lat = business["coordinates"]["latitude"]
         long = business["coordinates"]["longitude"]
     -->
+    <script src="static/js/script.js"></script>
 </body>
 
 </html>
