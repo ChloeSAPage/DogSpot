@@ -25,6 +25,16 @@ body {
     display: flex;
     gap: 10px;
 }
+#explore-button2 {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #493944;
+    color: #c6edf3;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
 
 .nav-button {
     padding: 10px 20px;
@@ -76,17 +86,6 @@ body {
 .overlay-text p {
     font-size: 1.2em;
     margin: 10px 0;
-}
-
-.explore-button {
-    padding: 10px 20px;
-    font-size: 1em;
-    cursor: pointer;
-    background-color: #493944;
-    color: #c6edf3;
-    border: none;
-    border-radius: 5px;
-    margin-top: 10px;
 }
 
 /* Responsive design for smaller screens */

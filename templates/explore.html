@@ -1,48 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<header class="header">
-    <img src="static/images/logo.png" alt="Logo" class="logo">
-    <div class="button-bar">
-        <button class="nav-button" id="home-button">Home</button>
-        <button class="nav-button" id="explore-button">Explore</button>
-        <button class="nav-button" id="contact-button">Contact</button>
-        <button class="nav-button" id="signin-button">Sign in</button>
-    </div>
-</header>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Link to CSS file -->
-    <link rel="stylesheet" href="static/css/homepage.css">
+    <link rel="stylesheet" href="static/css/explore.css">
     <title>Explore</title>
 </head>
-
 <body>
+    <header class="header">
+        <img src="static/images/logo.png" alt="Logo" class="logo">
+        <div class="button-bar">
+            <button class="nav-button" id="home-button">Home</button>
+            <button class="nav-button" id="explore-button">Explore</button>
+            <button class="nav-button" id="contact-button">Contact</button>
+            <button class="nav-button" id="signin-button">Sign in</button>
+        </div>
+    </header>
 
-    <form action="explore" method="post">
-        <input class="form-control" type="text" id="location" name="location" required>
-        <button>Submit</button>
+    <form action="explore" method="post" class="search-form" id="search-form">
+        <input class="form-control" type="text" id="location" name="location" placeholder="Type location here" required>
+        <button class="search-button" type="submit">Submit</button>
+        <button class="location-button" type="button" onclick="getLocation()">Get Location</button>
     </form>
 
+    <!-- Rest of your HTML -->
+    
     <!-- Render the Information from API-->
-
-    {% for business in businesses %}
-        <h2> {{business["name"]}} </h2>
-        <img src={{business["image_url"]}}>
-        <li> Rating: {{business["rating"]}} </li>
-
-        {% for info in business["location"]["display_address"] %}
-        <li> {{info}} </li>
+    <div class="results-container">
+        {% for business in businesses %}
+        <div class="business-bubble" onclick="window.location.href=''">
+            <div class="business-image-wrapper">
+                <img src="{{ business["image_url"] }}" alt="{{ business['name'] }}" class="business-image">
+            </div>
+            <div class="business-details">
+                <h2>{{ business["name"] }}</h2>
+                <p>Rating: {{ business["rating"] }}</p>
+                <ul>
+                    {% for info in business["location"]["display_address"] %}
+                    <li>{{ info }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
         {% endfor %}
-
-    {% endfor %}
-
-    <!--
-        If you want to get the lat long it will be:
-        lat = business["coordinates"]["latitude"]
-        long = business["coordinates"]["longitude"]
-    -->
+    </div>
     <script src="static/js/script.js"></script>
+   
 </body>
-
 </html>
