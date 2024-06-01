@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request
-import requests
 from config import API_KEY
 from yelpApi import YelpAPI
 
