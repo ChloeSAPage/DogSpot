@@ -13,7 +13,7 @@ class TestGetBusinesses(TestCase):
         result = type(self.yelpAPI.get_businesses('london'))
         self.assertEqual(expected, result)
 
-    def test_response_contains_dic(self):
+    def test_response_contains_dict(self):
         expected = type({})
         result = type(self.yelpAPI.get_businesses('london')[0])
         self.assertEqual(expected, result)
@@ -40,15 +40,9 @@ class TestGetBusinessesByCoords(TestCase):
         result = type(self.yelpAPI.get_businesses_by_coords(51.51283552118349, -0.135955810546875))
         self.assertEqual(expected, result)
 
-    def test_response_contains_dic(self):
+    def test_response_contains_dict(self):
         expected = type({})
         result = type(self.yelpAPI.get_businesses_by_coords(51.51283552118349, -0.135955810546875)[0])
-        self.assertEqual(expected, result)
-
-    def test_no_input(self):
-        # technically you can't put no input but sneaky cybersecurity people might be able to
-        expected = type([])
-        result = type(self.yelpAPI.get_businesses_by_coords(51.51283552118349, -0.135955810546875))
         self.assertEqual(expected, result)
 
     def test_wrong_lat_long(self):
@@ -61,14 +55,14 @@ class TestGetBusinessesByCoords(TestCase):
         result = type(self.yelpAPI.get_businesses_by_coords("", ""))
         self.assertEqual(expected, result)
 
-    def test_large_input(self):
-        expected = type([])
-        result = type(self.yelpAPI.get_businesses_by_coords(500, 500))
-        self.assertEqual(expected, result)
-
     def test_char_input(self):
         expected = type([])
         result = type(self.yelpAPI.get_businesses_by_coords("long", "lat"))
+        self.assertEqual(expected, result)
+
+    def test_out_of_range_input(self):
+        expected = type([])
+        result = type(self.yelpAPI.get_businesses_by_coords(500, 500))
         self.assertEqual(expected, result)
 
 

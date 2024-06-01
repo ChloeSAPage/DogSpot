@@ -28,9 +28,15 @@ def explore():
         businesses = []
     return render_template("explore.html", businesses=businesses)
 
+
 @app.route("/signin", methods=["GET"])
 def signin():
     return render_template("signin.html")
+
+
+@app.route("/contact", methods=["GET"])
+def contact():
+    return render_template("contact.html")
 
 
 if __name__ == "__main__":
