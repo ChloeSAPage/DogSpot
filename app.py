@@ -16,9 +16,7 @@ def explore():
         # Check if latitude and longitude are provided by the browser
         if 'latitude' in request.form and 'longitude' in request.form:
             lat = request.form['latitude']
-            print(f"latitude: {lat}")
             lon = request.form['longitude']
-            print(f"longitude: {lon}")
             businesses = yelpAPI.get_businesses_by_coords(lat, lon)
         # Fallback to location if provided by the user
         elif 'location' in request.form:
