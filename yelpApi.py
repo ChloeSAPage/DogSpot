@@ -9,9 +9,8 @@ class YelpAPI:
         url = f"{self.baseurl}location={location}&term=Dogs+Friendly"
         response = requests.get(url, headers=self.headers)
 
-        # Log the status code and the JSON response for debugging
+        # Log the status code for debugging
         print(f"Status Code: {response.status_code}")
-        print(f"Response JSON: {response.json()}")
 
         result = response.json()
         # Check if 'businesses' key exists in the result
@@ -26,9 +25,8 @@ class YelpAPI:
         url = f"{self.baseurl}latitude={latitude}&longitude={longitude}&term=Dogs+Friendly"
         response = requests.get(url, headers=self.headers)
 
-        # Log the status code and the JSON response for debugging
+        # Log the status code for debugging
         print(f"Status Code: {response.status_code}")
-        print(f"Response JSON: {response.json()}")
 
         result = response.json()
         # Check if 'businesses' key exists in the result
