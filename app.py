@@ -34,6 +34,10 @@ def explore():
 def signin():
     return render_template("signin.html")
 
+@app.route("/contact", methods=["GET"])
+def contact():
+    return render_template("contact.html")
+
 def get_businesses(location):
     url = f"https://api.yelp.com/v3/businesses/search?location={location}&term=Dogs+Friendly"
     headers = {"accept": "application/json", "Authorization": f"Bearer {API_KEY}"}

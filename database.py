@@ -8,7 +8,7 @@ logging.basicConfig(filename='app.log', level=logging.ERROR)
 
 def get_db_connection():
     try:
-        connection = mysql.connector.connect(
+        connection = mysql.connector.connect( 
             host="localhost",
             user="root",
             password="",
