@@ -33,11 +33,23 @@ def explore():
 def signin():
     return render_template("signin.html")
 
+def get_businesses(location):
+    url = f"https://api.yelp.com/v3/businesses/search?location={location}&term=Dogs+Friendly"
+    headers = {"accept": "application/json", "Authorization": f"Bearer {API_KEY}"}
+    response = requests.get(url, headers=headers)
+    
+    # Log the status code and the JSON response for debugging
+    print(f"Status Code: {response.status_code}")
+    print(f"Response JSON: {response.json()}")
 
-@app.route("/contact", methods=["GET"])
-def contact():
-    return render_template("contact.html")
-
+    result = response.json()
+    # Check if 'businesses' key exists in the result
+    if 'businesses' in result:
+        return result['businesses']
+    else:
+        # Handle the case where 'businesses' key is not present
+        print("Error: 'businesses' key not found in the response.")
+        return []
 
 if __name__ == "__main__":
     app.run(debug=True)
