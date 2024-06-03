@@ -4,6 +4,7 @@ from config import API_KEY
 import mysql.connector #imports mysql connector module which provides functions and classes to establish connection with mysql
 from mysql.connector import Error
 
+yelpAPI = YelpAPI(API_KEY)
 app = Flask(__name__)
 
 app.secret_key = 'your_secret_key'  # Replace with a strong secret key
