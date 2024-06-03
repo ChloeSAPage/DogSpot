@@ -159,7 +159,7 @@ class UserSignup:
 
 def get_db_connection():
     try:
-        connection = mysql.connector.connect(
+        connection = mysql.connector.connect( 
             host="localhost",
             user="root",
             password="",
@@ -176,14 +176,13 @@ def create_tables(connection):
         cursor = self.connection.cursor()
         # Insert SQL statements to create the tables
         create_users_table = """
-            CREATE TABLE IF NOT EXISTS users_table (
-                user_id INT AUTO_INCREMENT PRIMARY KEY,
-                name VARCHAR(100) NOT NULL,
-                username VARCHAR(50) NOT NULL,
-                password VARCHAR(225) NOT NULL,
-                email VARCHAR(100) NOT NULL
+        CREATE TABLE IF NOT EXISTS Users (
+            user_id INT AUTO_INCREMENT PRIMARY KEY,
+            username VARCHAR(50) NOT NULL,
+            password VARCHAR(225) NOT NULL,
+            email VARCHAR(100) NOT NULL
             )
-        """
+            """
         create_locations_table = """
             CREATE TABLE IF NOT EXISTS Locations (
                 location_id VARCHAR(255) PRIMARY KEY,
@@ -198,8 +197,9 @@ def create_tables(connection):
                 yelp_url VARCHAR(255),
                 latitude DECIMAL(9,9),
                 longitude DECIMAL(9,9)
-            )
-        """
+                """
+            
+
         create_search_history_table = """
             CREATE TABLE IF NOT EXISTS Search_History (
                 search_id INT AUTO_INCREMENT PRIMARY KEY,
