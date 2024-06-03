@@ -29,14 +29,15 @@ def create_tables(connection):
             user_id INT AUTO_INCREMENT PRIMARY KEY,
             username VARCHAR(50) NOT NULL,
             password VARCHAR(225) NOT NULL,
-            email VARCHAR(100) NOT NULL 
+            email VARCHAR(100) NOT NULL
             )
             """
+            
         create_locations_table = """
         CREATE TABLE IF NOT EXISTS Locations (
-            location_id VARCHAR(255) PRIMARY KEY, 
-            name VARCHAR(100) NOT NULL, 
-            type VARCHAR(50), 
+            location_id VARCHAR(255) PRIMARY KEY,
+            name VARCHAR(100) NOT NULL,
+            type VARCHAR(50),
             address VARCHAR(255),
             city VARCHAR(100),
             post_code VARCHAR(15),
@@ -49,11 +50,11 @@ def create_tables(connection):
 
         create_search_history_table = """
         CREATE TABLE IF NOT EXISTS Search_History (
-            search_id INT AUTO_INCREMENT PRIMARY KEY, 
-            user_id INT, 
+            search_id INT AUTO_INCREMENT PRIMARY KEY,
+            user_id INT,
             searched_location VARCHAR(255),
-            search_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP, 
-            results JSON, 
+            search_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            results JSON,
             FOREIGN KEY (user_id) REFERENCES Users (user_id)
             )
             """
