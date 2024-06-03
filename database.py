@@ -10,8 +10,8 @@ def get_db_connection():
     try:
         connection = mysql.connector.connect(
             host="localhost",
-            user="root",
-            password="",
+            user="newuser",
+            password="new_password",
             database="pet_friendly_database"
         )
         return connection
@@ -61,6 +61,8 @@ def create_tables(connection):
         cursor.execute(create_users_table)
         cursor.execute(create_search_history_table)
         cursor.execute(create_locations_table)
+        print('made the tables')
+
 
 # maybe add logging.ingo here to confirm tables created successfully unless error raised
 
@@ -78,6 +80,7 @@ def main():
     if connection:
         create_tables(connection) # Create database tables
         connection.close() # Close database connection
+        print('done')
     else:
         logging.error("Error connecting to the database")
 

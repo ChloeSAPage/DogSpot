@@ -1,50 +1,78 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="static/css/explore.css">
     <title>Explore</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtJwk9xl-hJbQzKirQ5JZZvbsVy2Q9P6E&callback=initMap" async defer></script>
 </head>
 <body>
     <header class="header">
         <img src="static/images/logo.png" alt="Logo" class="logo">
         <div class="button-bar">
+            {% if session['username'] %}
+                <p class="welcome-message">Welcome, {{ session['username'] }}!</p>
+                <form action="/signout" method="post">
+                    <button class="nav-button" id="signout-button">Sign out</button>
+                </form>
+            {% else %}
+                <button class="nav-button" id="signin-button">Sign in</button>
+            {% endif %}
             <button class="nav-button" id="home-button">Home</button>
             <button class="nav-button" id="explore-button">Explore</button>
             <button class="nav-button" id="contact-button">Contact</button>
-            <button class="nav-button" id="signin-button">Sign in</button>
         </div>
     </header>
 
     <form action="explore" method="post" class="search-form" id="search-form">
         <input class="form-control" type="text" id="location" name="location" placeholder="Type location here" required>
-        <button class="search-button" type="submit">Submit</button>
-        <button class="location-button" type="button" onclick="getLocation()">Get Location</button>
+        <input type="hidden" id="currentLocationUsed" name="currentLocationUsed" value="false">
+        <button class="search-button" type="submit">Search</button>
+        <button class="location-button" type="button" onclick="getLocation()">Use Current Location</button>
     </form>
 
-    <!-- Rest of your HTML -->
-    
-    <!-- Render the Information from API-->
+    <div class="recent-searches-container">
+        <h3>Recent Searches</h3>
+        <ul id="recent-searches-list">
+            {% for search in recent_searches %}
+                <li><a href="#" onclick="submitSearch(this);">{{ search['searched_location'] }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+
     <div class="results-container">
         {% for business in businesses %}
-        <div class="business-bubble" onclick="window.location.href=''">
+        <div class="business-bubble" onclick="showMoreInfo('{{ business['id'] }}', {{ business['coordinates']['latitude'] }}, {{ business['coordinates']['longitude'] }}, '{{ currentLocationUsed }}')">
             <div class="business-image-wrapper">
-                <img src="{{ business["image_url"] }}" alt="{{ business['name'] }}" class="business-image">
+                <img src="{{ business['image_url'] }}" alt="{{ business['name'] }}" class="business-image">
             </div>
             <div class="business-details">
-                <h2>{{ business["name"] }}</h2>
-                <p>Rating: {{ business["rating"] }}</p>
+                <h2>{{ business['name'] }}</h2>
+                <p>Rating: {{ business['rating'] }}</p>
                 <ul>
-                    {% for info in business["location"]["display_address"] %}
-                    <li>{{ info }}</li>
+                    {% for info in business['location']['display_address'] %}
+                        <li>{{ info }}</li>
                     {% endfor %}
                 </ul>
             </div>
         </div>
+        <div class="business-details-container" id="details-{{ business['id'] }}" style="display: none;">
+            <h3>{{ business['name'] }}</h3>
+            <img src="{{ business['image_url'] }}" alt="{{ business['name'] }}" class="business-image">
+            <p><strong>Rating:</strong> {{ business['rating'] }} / 5</p>
+            <p><strong>Categories:</strong> {{ business['categories'] | join(', ', 'title') }}</p>
+            <p><strong>Status:</strong> {{ 'Open' if not business['is_closed'] else 'Temporarily Closed' }}</p>
+            <p><strong>Address:</strong> {{ business['location']['display_address'] | join(', ') }}</p>
+            <p><strong>Phone:</strong> {{ business['display_phone'] }}</p>
+            <p><strong>Distance:</strong> {{ business['distance'] | round(2) }} meters away</p>
+            {% if business['attributes']['menu_url'] %}
+            <p><a href="{{ business['attributes']['menu_url'] }}">View Menu</a></p>
+            {% endif %}
+            <div id="map-{{ business['id'] }}" class="map-container"></div>
+        </div>
         {% endfor %}
     </div>
+    
     <script src="static/js/script.js"></script>
-   
 </body>
 </html>

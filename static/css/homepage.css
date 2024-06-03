@@ -24,7 +24,9 @@ body {
 .button-bar {
     display: flex;
     gap: 10px;
+    align-items: center; /* Ensures vertical alignment is centered */
 }
+
 #explore-button2 {
     padding: 10px 20px;
     font-size: 1em;
@@ -45,7 +47,12 @@ body {
     border: none;
     border-radius: 5px;
 }
-
+.welcome-message {
+    font-family: Arial, sans-serif;
+    font-size: 1em; 
+    line-height: 40px; 
+    color: #c6edf3;
+}
 /* Image container styling */
 .image-container {
     position: relative;

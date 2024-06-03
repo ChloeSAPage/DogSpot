@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,25 +11,57 @@
         <button class="nav-button" id="home-button">Home</button>
         <button class="nav-button" id="explore-button">Explore</button>
         <button class="nav-button" id="contact-button">Contact</button>
-        <button class="nav-button" id="signin-button">Sign in</button>
+        {% if session['username'] %}
+        <form action="/signout" method="post">
+            <button class="nav-button" id="signout-button">Sign out</button>
+        </form>
+    {% else %}
+    <button class="nav-button" id="signin-button">Sign in</button>
+    {% endif %}
     </div>
 </header>
 <body>
-    <div class="signin-container">
+    {% if session['username'] %}
+        <p>Welcome, {{ session['username'] }}!</p>
+        <form action="/signout" method="post">
+            <button type="submit">Sign Out</button>
+        </form>
+    {% else %}
+    <div class="signin-container" id="signin-container">
         <h1>Sign In</h1>
-        <form action="/submit-signin" method="POST">
+        <form id="signin-form" action="/submit-signin" method="POST">
             <div class="form-group">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
+                <label for="signin-username">Username:</label>
+                <input type="text" id="signin-username" name="username" required>
             </div>
             <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
+                <label for="signin-password">Password:</label>
+                <input type="password" id="signin-password" name="password" required>
             </div>
             <button type="submit" class="signin-button">Sign In</button>
         </form>
     </div>
+    <div class="signup-container" id="signup-container">
+        <h1>Sign Up</h1>
+        <form id="signup-form" action="/submit-signup" method="POST">
+            <div class="form-group">
+                <label for="signup-username">Username:</label>
+                <input type="text" id="signup-username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="signup-password">Password:</label>
+                <input type="password" id="signup-password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="signup-email">Email:</label>
+                <input type="email" id="signup-email" name="email" required>
+            </div>
+            <button type="submit" class="signup-button">Sign Up</button>
+        </form>
+    </div>
+    <div class="signin-message-container" id="signin-message-container" style="display: none;">
+        <p id="signin-message"></p>
+    </div>    {% endif %}
     <script src="static/js/script.js"></script>
 </body>
-
 </html>
