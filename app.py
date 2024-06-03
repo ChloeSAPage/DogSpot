@@ -4,7 +4,6 @@ from config import API_KEY
 import mysql.connector #imports mysql connector module which provides functions and classes to establish connection with mysql
 from mysql.connector import Error
 
-yelpAPI = YelpAPI(API_KEY)
 app = Flask(__name__)
 
 app.secret_key = 'your_secret_key'  # Replace with a strong secret key
@@ -21,32 +20,26 @@ def explore():
     user_id = session.get('user_id')  # Get user_id from session, if it exists
     if not user_id:
         session.clear()
-        # Handle the case where there is no user_id, perhaps by redirecting to the login page
         return redirect(url_for('signin'))
     if request.method == 'POST':
         # Check if latitude and longitude are provided by the browser
         if 'latitude' in request.form and 'longitude' in request.form:
             lat = request.form['latitude']
             lon = request.form['longitude']
-
-
-            # Retrieve 'currentLocationUsed' from the form, default to 'false' if not present
             current_location_used = request.form.get('currentLocationUsed', 'false')
             businesses = get_businesses_by_coords(lat, lon)
-        # Fallback to location if provided by the user
         elif 'location' in request.form:
             location = request.form['location']
-                    # Store the search location in the database
             connection = mysql.connector.connect(
-            host="localhost",
-            user="newuser",
-            password="new_password",
-            database="pet_friendly_database"
+                host="localhost",
+                user="newuser",
+                password="new_password",
+                database="pet_friendly_database"
             )
             cursor = connection.cursor()
             cursor.execute(
-            "INSERT INTO Search_History (user_id, searched_location) VALUES (%s, %s)",
-            (user_id, location)
+                "INSERT INTO Search_History (user_id, searched_location) VALUES (%s, %s)",
+                (user_id, location)
             )
             connection.commit()
             cursor.close()
@@ -55,11 +48,11 @@ def explore():
     
     recent_searches = []
     connection = mysql.connector.connect(
-            host="localhost",
-            user="newuser",
-            password="new_password",
-            database="pet_friendly_database"
-            )
+        host="localhost",
+        user="newuser",
+        password="new_password",
+        database="pet_friendly_database"
+    )
     cursor = connection.cursor(dictionary=True)
     cursor.execute("""
     SELECT searched_location, MAX(search_date) as latest_search_date
@@ -74,6 +67,7 @@ def explore():
     cursor.close()
     connection.close()
     return render_template("explore.html", businesses=businesses, currentLocationUsed=current_location_used, recent_searches=recent_searches)
+
 @app.route("/signin", methods=["GET"])
 def signin():
     return render_template("signin.html")
@@ -96,14 +90,15 @@ def submit_signin():
         if user:
             session['username'] = user['username']
             session['user_id'] = user['user_id']  # Set user_id in session
-            return redirect(url_for('index'))
+            return redirect(url_for('explore'))  # Redirect to the explore page
         else:
             return 'Invalid credentials', 401
-    except Error as error:
+    except mysql.connector.Error as error:
         print(f"There was an error connecting to MySQL: {error}")
         return 'Database connection error', 500
     finally:
         if connection and connection.is_connected():
+            cursor.close()
             connection.close()
 
 @app.route("/submit-signup", methods=["POST"])
@@ -125,13 +120,21 @@ def submit_signup():
             (username, password, email)
         )
         connection.commit()
+        
+        # Fetch the newly created user to get the user_id
+        cursor.execute("SELECT * FROM Users WHERE username = %s", (username,))
+        user = cursor.fetchone()
+        
         session['username'] = username
-        return redirect(url_for('index'))
-    except Error as error:
+        session['user_id'] = user[0]  # Assuming user_id is the first column in the Users table
+        
+        return redirect(url_for('explore'))  # Redirect to the explore page
+    except mysql.connector.Error as error:
         print(f"There was an error connecting to MySQL: {error}")
         return 'Database connection error', 500
     finally:
         if connection and connection.is_connected():
+            cursor.close()
             connection.close()
 @app.route("/signout", methods=['GET', 'POST'])
 def signout():
@@ -169,6 +172,11 @@ def get_businesses_by_coords(latitude, longitude):
         # Handle the case where 'businesses' key is not present
         print("Error: 'businesses' key not found in the response.")
         return []
+    
+@app.route("/contact", methods=["GET"])
+def contact():
+    return render_template("contact.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True)

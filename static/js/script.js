@@ -1,5 +1,3 @@
-console.log('script.js is loaded');
-
 document.addEventListener('DOMContentLoaded', function() {
     // Select all navigation buttons
     console.log('DOM fully loaded and parsed');
@@ -200,22 +198,20 @@ function submitSearch(element) {
     return false; // Prevent default link action
 }
 
-     // Form submission handling
-    const contactForm = document.getElementById('contact-form');
-    contactForm.addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent default form submission
-        // Form validation
-        const name = document.getElementById('name').value.trim();
-        const email = document.getElementById('email').value.trim();
-        const message = document.getElementById('message').value.trim();
-        if (!name || !email || !message) {
-            alert('Please ensure all fields have been filled out');
-            return;
-        }
-        // Handle form submission
-        alert('Thank you for your message! We will get back to you soon.');
-        // Reset form fields
-        contactForm.reset();
-    });
-
-});
+// Form submission handling
+const contactForm = document.getElementById('contact-form');
+contactForm.addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent default form submission
+    // Form validation
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+    if (!name || !email || !message) {
+        alert('Please ensure all fields have been filled out');
+        return;
+    }
+    // Handle form submission
+    alert('Thank you for your message! We will get back to you soon.');
+    // Reset form fields
+    contactForm.reset();
+}); 
