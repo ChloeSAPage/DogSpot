@@ -1,13 +1,23 @@
-from flask import Flask, render_template, request, session, redirect, url_for
+from flask import Flask, render_template, request, session, redirect, url_for, flash
 import requests
 from config import API_KEY
 import mysql.connector #imports mysql connector module which provides functions and classes to establish connection with mysql
 from mysql.connector import Error
+import logging
 
 app = Flask(__name__)
 
 app.secret_key = 'your_secret_key'  # Replace with a strong secret key
 
+logging.basicConfig(filename='app.log', level=logging.ERROR)
+
+class DatabaseInsertionError(Exception):
+    def __init__(self, message):
+        super().__init__(message)
+
+class DatabaseConnectionError(Exception):
+    def __init__(self, message):
+        super().__init__(message)
 @app.route("/", methods=["GET"])
 def index():
     return render_template("homepage.html")
@@ -85,7 +95,7 @@ def submit_signin():
             database="pet_friendly_database"
         )
         cursor = connection.cursor(dictionary=True)
-        cursor.execute("SELECT * FROM Users WHERE username = %s AND password = %s", (username, password))
+        cursor.execute("SELECT * FROM Users_table WHERE username = %s AND password = %s", (username, password))
         user = cursor.fetchone()
         if user:
             session['username'] = user['username']
@@ -116,13 +126,13 @@ def submit_signup():
         )
         cursor = connection.cursor()
         cursor.execute(
-            "INSERT INTO Users (username, password, email) VALUES (%s, %s, %s)",
+            "INSERT INTO Users_table (username, password, email) VALUES (%s, %s, %s)",
             (username, password, email)
         )
         connection.commit()
         
         # Fetch the newly created user to get the user_id
-        cursor.execute("SELECT * FROM Users WHERE username = %s", (username,))
+        cursor.execute("SELECT * FROM Users_table WHERE username = %s", (username,))
         user = cursor.fetchone()
         
         session['username'] = username
@@ -176,6 +186,40 @@ def get_businesses_by_coords(latitude, longitude):
 @app.route("/contact", methods=["GET"])
 def contact():
     return render_template("contact.html")
+
+@app.route("/submit-contact", methods=["POST"])
+def submit_contact():
+    name = request.form['name']
+    email = request.form['email']
+    message = request.form['message']
+
+    logging.debug(f"Received contact form submission: name={name}, email={email}, message={message}")
+
+    try:
+        logging.debug("Attempting to connect to the database")
+        connection = mysql.connector.connect(
+            host="localhost",
+            user="newuser",
+            password="new_password",
+            database="pet_friendly_database"
+        )
+        logging.debug("Successfully connected to the database")
+
+        cursor = connection.cursor()
+        query = "INSERT INTO contact_form (name, email, message) VALUES (%s, %s, %s)"
+        cursor.execute(query, (name, email, message))
+        connection.commit()
+        logging.debug("Inserted contact form submission into database")
+
+        cursor.close()
+        connection.close()
+
+        flash('Thank you for contacting us!', 'success')
+        return redirect(url_for('contact'))
+    except Error as error:
+        logging.error(f"There was an error connecting to MySQL: {error}")
+        flash('There was an error submitting your message. Please try again later.', 'danger')
+        return redirect(url_for('contact'))
 
 
 if __name__ == "__main__":

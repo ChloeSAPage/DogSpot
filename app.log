@@ -1,0 +1,537 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 659-292-916
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:21:25] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:21:26] "GET /static/css/homepage.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:21:26] "GET /static/images/logo.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:21:26] "GET /static/images/dogpagehome.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:21:26] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:22:26] "[36mGET /static/css/homepage.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:22:30] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:22:30] "GET /static/css/homepage.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:22:30] "GET /static/images/logo.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:22:30] "GET /static/images/dogpagehome.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:22:30] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 659-292-916
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:24:36] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:24:36] "[36mGET /static/css/homepage.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:24:36] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:24:36] "[36mGET /static/images/dogpagehome.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:24:36] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:24:37] "GET /contact HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:24:37] "[33mGET /static/contact.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:24:37] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:24:37] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:24:58] "[33mGET /static/contact.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 659-292-916
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 659-292-916
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:29:30] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:29:30] "GET /static/css/homepage.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:29:30] "GET /static/images/logo.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:29:30] "GET /static/images/dogpagehome.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:29:30] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:29:33] "GET /contact HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:29:33] "[33mGET /static/contact.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:29:33] "GET /static/images/logo.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:29:33] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 659-292-916
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:34:57] "GET /contact HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:34:57] "[33mGET /static/contact.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:34:57] "GET /static/images/logo.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:34:57] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 659-292-916
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:36:39] "GET /contact HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:36:39] "[33mGET /static/contact.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:36:39] "GET /static/images/logo.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:36:39] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:36:39] "GET /contact HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:36:39] "[33mGET /static/contact.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:36:39] "GET /static/images/logo.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:36:39] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 659-292-916
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:40:34] "GET /contact HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:40:34] "[33mGET /static/contact.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:40:34] "GET /static/images/logo.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:40:35] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 659-292-916
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 659-292-916
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:43:36] "GET /contact HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:43:36] "[33mGET /static/contact.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:43:36] "GET /static/images/logo.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:43:36] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:46:05] "[32mGET /explore HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:46:05] "GET /signin HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:46:05] "GET /static/css/signin.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:46:05] "GET /static/images/logo.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:46:05] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:46:12] "[32mPOST /submit-signin HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:46:12] "GET /explore HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:46:12] "GET /static/css/explore.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:46:12] "GET /static/images/logo.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:46:12] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:46:23] "POST /explore HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:46:23] "GET /static/css/explore.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:46:23] "GET /static/images/logo.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:46:23] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:46:36] "GET /contact HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:46:36] "[33mGET /static/contact.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:46:36] "GET /static/images/logo.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:46:36] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 659-292-916
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:48:58] "GET /contact HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:48:58] "[33mGET /static/contact.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:48:58] "GET /static/images/logo.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:48:58] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:49:05] "[32mPOST /submit-contact HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:49:05] "GET /contact HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:49:05] "[33mGET /static/contact.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:49:05] "GET /static/images/logo.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:49:05] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:49:35] "[32mPOST /submit-contact HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:49:35] "GET /contact HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:49:35] "[33mGET /static/contact.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:49:35] "GET /static/images/logo.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:49:35] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 659-292-916
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:52:46] "GET /contact HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:52:46] "[33mGET /static/contact.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:52:46] "GET /static/images/logo.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:52:46] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:52:52] "[32mPOST /submit-contact HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:52:52] "GET /contact HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:52:52] "[33mGET /static/contact.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:52:52] "GET /static/images/logo.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:52:52] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:53:22] "[32mPOST /submit-contact HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:53:22] "GET /contact HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:53:22] "[33mGET /static/contact.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:53:22] "GET /static/images/logo.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:53:22] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 659-292-916
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:54:11] "GET /contact HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:54:11] "[33mGET /static/contact.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:54:11] "GET /static/images/logo.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:54:11] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:54:11] "GET /contact HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:54:11] "[33mGET /static/contact.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:54:12] "GET /static/images/logo.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:54:12] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:54:12] "GET /contact HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:54:12] "[33mGET /static/contact.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:54:12] "GET /static/images/logo.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:54:12] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 659-292-916
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:54:31] "GET /contact HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:54:31] "GET /static/images/logo.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:54:31] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:54:31] "GET /static/css/contact.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:54:38] "[32mPOST /submit-contact HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:54:38] "GET /contact HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:54:38] "GET /static/css/contact.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:54:38] "GET /static/images/logo.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:54:38] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 659-292-916
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:56:00] "[32mPOST /submit-contact HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:56:00] "GET /contact HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:56:00] "GET /static/images/logo.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:56:00] "GET /static/css/contact.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:56:00] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 659-292-916
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:58:27] "[32mPOST /submit-contact HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:58:27] "GET /contact HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:58:27] "GET /static/css/contact.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:58:27] "GET /static/images/logo.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2024 23:58:27] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 659-292-916
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:00:23] "GET /contact HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:00:23] "GET /static/css/contact.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:00:23] "GET /static/images/logo.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:00:23] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:00:29] "[32mPOST /submit-contact HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:00:29] "GET /contact HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:00:29] "GET /static/css/contact.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:00:29] "GET /static/images/logo.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:00:29] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 659-292-916
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:01:52] "GET /contact HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:01:52] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:01:52] "GET /static/images/logo.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:01:52] "GET /static/css/contact.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:02:06] "[32mPOST /submit-contact HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:02:06] "GET /contact HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:02:06] "GET /static/css/contact.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:02:06] "GET /static/images/logo.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:02:06] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:02:50] "[32mPOST /submit-contact HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:02:50] "GET /contact HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:02:50] "GET /static/css/contact.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:02:50] "GET /static/images/logo.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:02:50] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:25] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:25] "GET /static/css/homepage.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:25] "GET /static/images/logo.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:26] "GET /static/images/dogpagehome.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:26] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:29] "GET /explore HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:29] "[36mGET /static/css/explore.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:29] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:29] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:31] "POST /explore HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:31] "[36mGET /static/css/explore.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:31] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:31] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:35] "POST /explore HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:35] "[36mGET /static/css/explore.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:35] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:35] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:38] "[32mPOST /signout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:38] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:38] "[36mGET /static/css/homepage.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:38] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:38] "[36mGET /static/images/dogpagehome.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:38] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:39] "[32mGET /explore HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:39] "GET /signin HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:39] "[36mGET /static/css/signin.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:39] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:39] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:44] "[32mPOST /submit-signin HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:44] "GET /explore HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:44] "[36mGET /static/css/explore.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:44] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:44] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:46] "[32mPOST /signout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:46] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:46] "[36mGET /static/css/homepage.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:46] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:46] "[36mGET /static/images/dogpagehome.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:46] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:48] "GET /signin HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:48] "[36mGET /static/css/signin.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:48] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:48] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:55] "[32mPOST /submit-signup HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:55] "GET /explore HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:55] "[36mGET /static/css/explore.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:55] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:55] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:57] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:57] "[36mGET /static/css/homepage.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:57] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:57] "[36mGET /static/images/dogpagehome.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:57] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:58] "GET /explore HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:58] "[36mGET /static/css/explore.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:58] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:03:58] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:04:02] "POST /explore HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:04:02] "[36mGET /static/css/explore.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:04:02] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:04:02] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:04:08] "POST /explore HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:04:08] "[36mGET /static/css/explore.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:04:08] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:04:08] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:04:13] "GET /contact HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:04:13] "[36mGET /static/css/contact.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:04:13] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:04:13] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Adeli\\Desktop\\CFG_Software_2_Group_6\\database.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 659-292-916
+DEBUG:mysql.connector:Building SSL context
+DEBUG:mysql.connector:Switching to SSL
+DEBUG:mysql.connector:SSL has been enabled
+DEBUG:mysql.connector:Starting authorization phase
+DEBUG:mysql.connector:The provided initial strategy is caching_sha2_password
+INFO:mysql.connector:package: mysql.connector.plugins
+INFO:mysql.connector:plugin_name: caching_sha2_password
+INFO:mysql.connector:AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+DEBUG:mysql.connector:Exchanging further packets
+DEBUG:mysql.connector:caching_sha2_password completed succesfully
+DEBUG:root:Database connection established
+DEBUG:mysql.connector:Building SSL context
+DEBUG:mysql.connector:Switching to SSL
+DEBUG:mysql.connector:SSL has been enabled
+DEBUG:mysql.connector:Starting authorization phase
+DEBUG:mysql.connector:The provided initial strategy is caching_sha2_password
+DEBUG:mysql.connector:Exchanging further packets
+DEBUG:mysql.connector:caching_sha2_password completed succesfully
+DEBUG:root:Connected to the database
+DEBUG:root:Creating tables...
+INFO:root:Tables created successfully
+DEBUG:root:Database connection closed
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 659-292-916
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:13:28] "GET /contact HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:13:28] "[36mGET /static/css/contact.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:13:28] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:13:28] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:13:37] "[32mPOST /submit-contact HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:13:37] "GET /contact HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:13:37] "[36mGET /static/css/contact.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:13:37] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:13:37] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 659-292-916
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:14:27] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:14:27] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:14:27] "[36mGET /static/css/homepage.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:14:27] "[36mGET /static/images/dogpagehome.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:14:27] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:14:29] "GET /explore HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:14:29] "[36mGET /static/css/explore.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:14:29] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:14:29] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:14:31] "[35m[1mPOST /explore HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:14:32] "[36mGET /explore?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:14:32] "[36mGET /explore?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:14:32] "[36mGET /explore?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:14:32] "[36mGET /explore?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 659-292-916
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:15:25] "[35m[1mPOST /explore HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:15:25] "[36mGET /explore?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:15:25] "[36mGET /explore?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:15:25] "[36mGET /explore?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:15:25] "[36mGET /explore?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:15:26] "GET /explore HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:15:26] "[36mGET /static/css/explore.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:15:26] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:15:26] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:15:28] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:15:28] "[36mGET /static/css/homepage.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:15:28] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:15:28] "[36mGET /static/images/dogpagehome.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:15:28] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:15:30] "GET /explore HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:15:30] "[36mGET /static/css/explore.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:15:30] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:15:30] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:15:44] "POST /explore HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:15:44] "[36mGET /static/css/explore.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:15:44] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:15:44] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:16:06] "[36mGET /static/css/explore.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:16:23] "[35m[1mPOST /explore HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:16:40] "[35m[1mPOST /explore HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:16:46] "POST /explore HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:16:46] "GET /static/css/explore.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:16:46] "GET /static/images/logo.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:16:46] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:16:54] "[32mPOST /signout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:16:54] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:16:54] "GET /static/css/homepage.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:16:54] "GET /static/images/logo.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:16:54] "GET /static/images/dogpagehome.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:16:54] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:16:55] "GET /signin HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:16:55] "GET /static/css/signin.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:16:55] "GET /static/images/logo.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:16:55] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:16:57] "[35m[1mPOST /explore HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:16:59] "[35m[1mPOST /submit-signin HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:17:41] "[35m[1mPOST /explore HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:17:43] "GET /signin HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:17:43] "GET /static/css/signin.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:17:43] "GET /static/images/logo.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:17:43] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:17:46] "[35m[1mPOST /submit-signin HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:17:47] "[36mGET /static/css/signin.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:17:48] "GET /signin HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:17:48] "GET /static/css/signin.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:17:48] "GET /static/images/logo.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:17:48] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:17:48] "GET /signin HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:17:48] "GET /static/css/signin.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:17:48] "GET /static/images/logo.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:17:48] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:17:54] "[35m[1mPOST /submit-signin HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:17:55] "[36mGET /static/css/signin.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 659-292-916
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:18:13] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:18:13] "[36mGET /static/css/homepage.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:18:13] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:18:13] "[36mGET /static/images/dogpagehome.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:18:13] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:18:16] "[32mGET /explore HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:18:16] "GET /signin HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:18:16] "[36mGET /static/css/signin.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:18:16] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:18:16] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:18:21] "[35m[1mPOST /submit-signin HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:18:28] "[35m[1mPOST /submit-signup HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:18:33] "[36mGET /static/css/signin.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:18:36] "[35m[1mPOST /submit-signin HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:19:37] "GET /signin HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:19:37] "GET /static/css/signin.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:19:37] "GET /static/images/logo.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:19:37] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:19:42] "[35m[1mPOST /submit-signup HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 659-292-916
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:20:22] "GET /signin HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:20:22] "GET /static/css/signin.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:20:22] "GET /static/images/logo.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:20:22] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:20:23] "GET /signin HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:20:23] "GET /static/css/signin.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:20:23] "GET /static/images/logo.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:20:23] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:20:28] "[32mPOST /submit-signup HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:20:28] "GET /explore HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:20:28] "GET /static/css/explore.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:20:28] "GET /static/images/logo.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:20:29] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:20:33] "POST /explore HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:20:33] "GET /static/css/explore.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:20:33] "GET /static/images/logo.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:20:33] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:20:39] "POST /explore HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:20:39] "GET /static/css/explore.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:20:39] "GET /static/images/logo.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:20:39] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:20:44] "POST /explore HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:20:44] "GET /static/css/explore.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:20:44] "GET /static/images/logo.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:20:44] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:20:46] "POST /explore HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:20:46] "GET /static/css/explore.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:20:46] "GET /static/images/logo.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:20:46] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:20:49] "POST /explore HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:20:49] "GET /static/css/explore.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:20:49] "GET /static/images/logo.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:20:49] "GET /static/js/script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:20:52] "[32mPOST /signout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:20:52] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:20:52] "[36mGET /static/css/homepage.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:20:52] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:20:52] "[36mGET /static/images/dogpagehome.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:20:52] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:20:53] "GET /signin HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:20:53] "[36mGET /static/css/signin.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:20:53] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:20:53] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:20:58] "[35m[1mPOST /submit-signin HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Adeli\\Desktop\\CFG_Software_2_Group_6\\app.py', reloading
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 659-292-916
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:21:27] "GET /signin HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:21:27] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:21:27] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:21:27] "[36mGET /static/css/signin.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:21:30] "[32mPOST /submit-signin HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:21:30] "GET /explore HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:21:30] "[36mGET /static/css/explore.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:21:30] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 00:21:30] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
