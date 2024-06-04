@@ -1,215 +1,203 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Select all navigation buttons
-    console.log('DOM fully loaded and parsed');
-    const navButtons = document.querySelectorAll('.nav-button');
-    
-    // Iterate over each button and add a click event listener
-    navButtons.forEach((button, index) => {
-        button.addEventListener('click', () => {
-            console.log(`Navigation Button ${index + 1} clicked`);
-        });
-        if (button.id === 'home-button') {
-            button.addEventListener('click', () => {
-                console.log('Home button clicked');
-                window.location.href = '/';
-            });
-        }
-        if (button.id === 'explore-button') {
-            button.addEventListener('click', () => {
-                console.log('Explore button clicked');
-                window.location.href = 'explore';
-            });
-        }
-        //explore.button2 is the 'explore now' button on the homepage
-        if (button.id === 'explore-button2') {
-            button.addEventListener('click', () => {
-                console.log('Explore button clicked');
-                window.location.href = 'explore';
-            });
-        }
-        if (button.id === 'contact-button') {
-            button.addEventListener('click', () => {
-                console.log('Contact button clicked');
-                window.location.href = 'contact';
-            });
-        }
-        if (button.id === 'signin-button') {
-            button.addEventListener('click', () => {
-                console.log('Sign In button clicked');
-                window.location.href = 'signin';
-            });
-        }
-        
-    });
+class App {
+    constructor() {
+        this.init();
+    }
 
-    // Function to get the user's location and submit it
-    function getLocation() {
+    init() {
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('DOM fully loaded and parsed');
+            this.setupNavButtons();
+            this.setupFormSubmission();
+            this.exposeGlobalFunctions(); // Expose necessary functions globally
+        });
+    }
+
+    setupNavButtons() {
+        const navButtons = document.querySelectorAll('.nav-button');
+        navButtons.forEach((button, index) => {
+            button.addEventListener('click', () => {
+                console.log(`Navigation Button ${index + 1} clicked`);
+                switch (button.id) {
+                    case 'home-button':
+                        this.navigateTo('/');
+                        break;
+                    case 'explore-button':
+                    case 'explore-button2':
+                        this.navigateTo('explore');
+                        break;
+                    case 'contact-button':
+                        this.navigateTo('contact');
+                        break;
+                    case 'signin-button':
+                        this.navigateTo('signin');
+                        break;
+                }
+            });
+        });
+    }
+
+    navigateTo(url) {
+        console.log(`Navigating to ${url}`);
+        window.location.href = url;
+    }
+
+    setupFormSubmission() {
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', (event) => {
+                console.log('Form is about to be submitted');
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const message = document.getElementById('message').value.trim();
+                if (!name || !email || !message) {
+                    alert('Please ensure all fields have been filled out');
+                    event.preventDefault();
+                    return;
+                }
+                console.log('Submitting form');
+            });
+        }
+
+        const searchButton = document.querySelector('.search-button');
+        if (searchButton) {
+            searchButton.addEventListener('click', () => {
+                document.getElementById('currentLocationUsed').value = 'false';
+            });
+        }
+
+        const locationButton = document.querySelector('.location-button');
+        if (locationButton) {
+            locationButton.addEventListener('click', () => {
+                this.getLocation();
+                document.getElementById('currentLocationUsed').value = 'true';
+            });
+        }
+    }
+
+    getLocation() {
         if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(submitLocation);
-        } else { 
+            navigator.geolocation.getCurrentPosition(this.submitLocation.bind(this));
+        } else {
             alert("Geolocation is not supported by this browser.");
         }
     }
 
-    function submitLocation(position) {
-        var lat = position.coords.latitude;
-        var lon = position.coords.longitude;
-        var form = document.getElementById('search-form');
-        var inputLat = document.createElement('input');
-        var inputLon = document.createElement('input');
-        var inputCurrentLocation = document.createElement('input');
-    
-        inputLat.type = 'hidden';
-        inputLat.name = 'latitude';
-        inputLat.value = lat;
-    
-        inputLon.type = 'hidden';
-        inputLon.name = 'longitude';
-        inputLon.value = lon;
-    
-        inputCurrentLocation.type = 'hidden';
-        inputCurrentLocation.name = 'currentLocationUsed';
-        inputCurrentLocation.value = 'true';
-    
+    submitLocation(position) {
+        const lat = position.coords.latitude;
+        const lon = position.coords.longitude;
+        const form = document.getElementById('search-form');
+        const inputLat = this.createHiddenInput('latitude', lat);
+        const inputLon = this.createHiddenInput('longitude', lon);
+        const inputCurrentLocation = this.createHiddenInput('currentLocationUsed', 'true');
+
         form.appendChild(inputLat);
         form.appendChild(inputLon);
         form.appendChild(inputCurrentLocation);
-    
-        // Console log the values to be submitted
-        console.log('Latitude:', inputLat.value);
-        console.log('Longitude:', inputLon.value);
-        console.log('Current Location Used:', inputCurrentLocation.value);
-    
-        // Submit the form
+
+        console.log('Latitude:', lat);
+        console.log('Longitude:', lon);
+        console.log('Current Location Used:', 'true');
+
         form.submit();
     }
 
-    const searchButton = document.querySelector('.search-button');
-    searchButton.addEventListener('click', function() {
-        document.getElementById('currentLocationUsed').value = 'false';
-    });
-
-    // Attach the geolocation function to the location button
-    const locationButton = document.querySelector('.location-button');
-    if(locationButton) {
-        locationButton.addEventListener('click', getLocation,document.getElementById('currentLocationUsed').value = 'true');
+    createHiddenInput(name, value) {
+        const input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = name;
+        input.value = value;
+        return input;
     }
 
-   
-
-    // Example sign-in event (you would replace this with actual authentication logic)
-    signinForm.addEventListener('submit', function(event) {
-        event.preventDefault();
-        user.signedIn = true;
-        user.username = document.getElementById('signin-username').value;
-        updateUI();
-    });
-
-    // Initial UI update
-    updateUI();
-});
-
-function showMoreInfo(businessId, latitude, longitude, currentLocationUsed) {
-    // Parse latitude and longitude as floats
-    var lat = parseFloat(latitude);
-    var lng = parseFloat(longitude);
-
-    // Check if the parsed values are finite numbers
-    if (!isFinite(lat) || !isFinite(lng)) {
-        console.error('Invalid coordinates:', latitude, longitude);
-        return;
+    exposeGlobalFunctions() {
+        window.showMoreInfo = App.showMoreInfo;
+        window.initMap = App.initMap;
+        window.getDirections = App.getDirections;
+        window.submitSearch = App.submitSearch;
+        window.getLocation = this.getLocation.bind(this); // Ensure this method is accessible globally
     }
 
-    // Find the container for the selected business
-    const detailContainer = document.getElementById('details-' + businessId);
-    console.log('Current Location Used:', currentLocationUsed); // Add this line for debugging
+    static showMoreInfo(businessId, latitude, longitude, currentLocationUsed) {
+        const lat = parseFloat(latitude);
+        const lng = parseFloat(longitude);
 
-    // Check if the detail container exists
-    if (detailContainer) {
-        // Display the container with more details for the selected business
-        detailContainer.style.display = 'block';
-
-        // Check if current location was used for the search
-        if (currentLocationUsed === 'true') {
-            // Call a function to show directions
-            getDirections(businessId, lat, lng);
-        } else {
-            // Call a function to just display the business on the map
-            initMap(businessId, lat, lng);
+        if (!isFinite(lat) || !isFinite(lng)) {
+            console.error('Invalid coordinates:', latitude, longitude);
+            return;
         }
-    } else {
-        console.log('No details found for Business ID:', businessId);
+
+        const detailContainer = document.getElementById('details-' + businessId);
+        console.log('Current Location Used:', currentLocationUsed);
+
+        if (detailContainer) {
+            detailContainer.style.display = 'block';
+            if (currentLocationUsed === 'true') {
+                App.getDirections(businessId, lat, lng);
+            } else {
+                App.initMap(businessId, lat, lng);
+            }
+        } else {
+            console.log('No details found for Business ID:', businessId);
+        }
     }
-}
 
-function initMap(businessId, latitude, longitude) {
-    var businessLocation = {lat: latitude, lng: longitude};
-    var map = new google.maps.Map(document.getElementById('map-' + businessId), {
-        zoom: 15,
-        center: businessLocation
-    });
-    var marker = new google.maps.Marker({
-        position: businessLocation,
-        map: map
-    });
-}
-
-function getDirections(businessId, businessLat, businessLng) {
-    var directionsService = new google.maps.DirectionsService();
-    var directionsRenderer = new google.maps.DirectionsRenderer();
-    var map = new google.maps.Map(document.getElementById('map-' + businessId), {
-        zoom: 14,
-        center: {lat: businessLat, lng: businessLng}
-    });
-    directionsRenderer.setMap(map);
-
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function(position) {
-            var userLocation = {
-                lat: position.coords.latitude,
-                lng: position.coords.longitude
-            };
-            var request = {
-                origin: userLocation,
-                destination: {lat: businessLat, lng: businessLng},
-                travelMode: 'DRIVING'
-            };
-            directionsService.route(request, function(result, status) {
-                if (status == 'OK') {
-                    directionsRenderer.setDirections(result);
-                } else {
-                    window.alert('Directions request failed due to ' + status);
-                }
-            });
-        }, function() {
-            window.alert('Geolocation service failed');
+    static initMap(businessId, latitude, longitude) {
+        const businessLocation = { lat: latitude, lng: longitude };
+        const map = new google.maps.Map(document.getElementById('map-' + businessId), {
+            zoom: 15,
+            center: businessLocation
         });
-    } else {
-        window.alert('Your browser doesn\'t support geolocation');
+        new google.maps.Marker({
+            position: businessLocation,
+            map: map
+        });
+    }
+
+    static getDirections(businessId, businessLat, businessLng) {
+        const directionsService = new google.maps.DirectionsService();
+        const directionsRenderer = new google.maps.DirectionsRenderer();
+        const map = new google.maps.Map(document.getElementById('map-' + businessId), {
+            zoom: 14,
+            center: { lat: businessLat, lng: businessLng }
+        });
+        directionsRenderer.setMap(map);
+
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition((position) => {
+                const userLocation = {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude
+                };
+                const request = {
+                    origin: userLocation,
+                    destination: { lat: businessLat, lng: businessLng },
+                    travelMode: 'DRIVING'
+                };
+                directionsService.route(request, (result, status) => {
+                    if (status == 'OK') {
+                        directionsRenderer.setDirections(result);
+                    } else {
+                        window.alert('Directions request failed due to ' + status);
+                    }
+                });
+            }, () => {
+                window.alert('Geolocation service failed');
+            });
+        } else {
+            window.alert('Your browser doesn\'t support geolocation');
+        }
+    }
+
+    static submitSearch(element) {
+        const location = element.textContent || element.innerText;
+        console.log('Clicked on:', location);
+        document.getElementById('location').value = location;
+        console.log('Input value set to:', location);
+        document.getElementById('search-form').submit();
+        console.log('Form submitted');
+        return false;
     }
 }
 
-function submitSearch(element) {
-    var location = element.textContent || element.innerText; // Get the location from the text of the clicked element
-    console.log('Clicked on:', location);
-    document.getElementById('location').value = location; // Set the value of the search input
-    console.log('Input value set to:', location);
-    document.getElementById('search-form').submit(); // Submit the form
-    console.log('Form submitted');
-    return false; // Prevent default link action
-}
-
-const contactForm = document.getElementById('contact-form');
-contactForm.addEventListener('submit', function(event) {
-    console.log('Form is about to be submitted');
-    // Temporarily comment out the preventDefault to check form submission
-    // event.preventDefault();
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const message = document.getElementById('message').value.trim();
-    if (!name || !email || !message) {
-        alert('Please ensure all fields have been filled out');
-        return;
-    }
-    console.log('Submitting form');
-});
+// Initialize the app
+new App();

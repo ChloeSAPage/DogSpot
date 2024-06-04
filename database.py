@@ -1,27 +1,19 @@
-# pip install mysql connector - latest version
-from flask import Flask, render_template, request
-import mysql.connector  # imports mysql connector module which provides functions and classes to establish connection with mysql
+import mysql.connector
 from mysql.connector import Error
-# import the Error class from mysql.connector module to handle exceptions that occur while interacting with the MySQL database
-# this will handle database errors - when error occurs i.e. connection failure or syntax error the 'Error' exception will be raised
-import logging  # import logging module to log errors if raised
+import logging
 
 logging.basicConfig(filename='app.log', level=logging.DEBUG)  # Set to DEBUG to capture more detailed logs
 
 class DatabaseInsertionError(Exception):
     def __init__(self, message):
-        super().__init__(message)  # custom exception handling class for database insertion error
-
+        super().__init__(message)
 
 class DatabaseConnectionError(Exception):
     def __init__(self, message):
-        super().__init__(message)  # custom exception handling class for connection error
-
-
-app = Flask(__name__)
+        super().__init__(message)
 
 class Database:
-    def __init__(self, host, user, password, database):
+    def __init__(self, host="localhost", user="newuser", password="new_password", database="pet_friendly_database"):
         self.host = host
         self.user = user
         self.password = password
@@ -106,30 +98,17 @@ class Database:
         finally:
             if cursor:
                 cursor.close()
+
 def get_db_connection():
-    try:
-        connection = mysql.connector.connect(
-            host="localhost",
-            user="newuser",
-            password="new_password",
-            database="pet_friendly_database"
-        )
-        logging.debug("Database connection established")
-        return connection
-    except Error as error:
-        logging.error(f"There was an error connecting to MySQL: {error}")
-        return None
+    db = Database()
+    return db.connect()
 
 def main():
-    connection = get_db_connection()
-    if connection:
-        db = Database(host="localhost", user="newuser", password="new_password", database="pet_friendly_database")
-        db.connect()
-        db.create_tables()
-        db.close()
-        print('done')
-    else:
-        logging.error("Error connecting to the database")
+    db = Database()
+    db.connect()
+    db.create_tables()
+    db.close()
+    print('done')
 
 if __name__ == "__main__":
     main()
