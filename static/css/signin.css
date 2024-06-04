@@ -1,4 +1,3 @@
-/* General body styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -7,7 +6,6 @@ body {
     text-align: center;
 }
 
-/* Header styling */
 .header {
     background-color: #493944;
     padding: 10px 10px;
@@ -24,80 +22,9 @@ body {
 .button-bar {
     display: flex;
     gap: 10px;
-    align-items: center; /* Ensures vertical alignment is centered */
+    align-items: center; 
 }
 
-/* Image container styling */
-.image-container {
-    position: relative;
-    width: 100%;
-    margin: 0 auto;
-}
-
-.doghome {
-    width: 100%;
-    height: auto;
-}
-
-/* Overlay container styling */
-.overlay-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: 100%;
-    background-color: #c6edf3a6; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.overlay-text {
-    color: #493944; /* Match header text color */
-    text-align: center;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.overlay-text h1 {
-    font-size: 2em;
-    margin: 0;
-}
-
-.overlay-text p {
-    font-size: 1.2em;
-    margin: 10px 0;
-}
-
-.explore-button {
-    padding: 10px 20px;
-    font-size: 1em;
-    cursor: pointer;
-    background-color: #493944;
-    color: #c6edf3;
-    border: none;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-
-/* Responsive design for smaller screens */
-@media (max-width: 600px) {
-    .overlay-container {
-        width: 100%;
-        height: 100%;
-    }
-    .overlay-text h1 {
-        font-size: 1.5em;
-    }
-    .overlay-text p {
-        font-size: 1em;
-    }
-    .explore-button {
-        font-size: 0.9em;
-    }
-}
-
-/* Sign In and Sign Up styling */
 .signin-container, .signup-container, .signin-message-container {
     padding: 20px;
     max-width: 400px;
@@ -164,7 +91,6 @@ body {
     background-color: #3a2d36;
 }
 
-/* Content container styling */
 .content-container {
     padding: 20px;
     max-width: 800px;
@@ -188,8 +114,21 @@ body {
     padding-left: 20px;
 }
 
-/* Responsive design for smaller screens */
+/* design for smaller screens */
 @media (max-width: 600px) {
+    .overlay-container {
+        width: 100%;
+        height: 100%;
+    }
+    .overlay-text h1 {
+        font-size: 1.5em;
+    }
+    .overlay-text p {
+        font-size: 1em;
+    }
+    .explore-button {
+        font-size: 0.9em;
+    }
     .content-container {
         padding: 10px;
         margin: 10px;

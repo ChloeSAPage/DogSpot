@@ -40,7 +40,7 @@ class App:
     def index(self):
         return render_template("homepage.html")
 
-#function 
+#function handles two types of location requests which is sent to the yelp api and returned also handles displaying recent searches
     def explore(self):
         businesses = []
         current_location_used = 'false'
@@ -87,7 +87,7 @@ class App:
     def signin(self):
         return render_template("signin.html")
 
-#function
+#function to find the matching user input from an existing account on the database if = true allows user access to explore page if not gives an error
     def submit_signin(self):
         username = request.form['username']
         password = request.form['password']
@@ -111,7 +111,7 @@ class App:
                 cursor.close()
                 connection.close()
 
-#function
+#function to take user input to create an account in the database
     def submit_signup(self):
         username = request.form['username']
         password = request.form['password']
@@ -145,7 +145,7 @@ class App:
         session.clear()
         return redirect(url_for('index'))
 
-#function
+#function for user inputted location requested to yelp api
     def get_businesses(self, location):
         url = f"https://api.yelp.com/v3/businesses/search?term=dog+friendly&open_now=true&sort_by=distance&location={location}"
         headers = {"accept": "application/json", "Authorization": f"Bearer {API_KEY}"}
@@ -157,7 +157,7 @@ class App:
             print("Error: 'businesses' key not found in the response.")
             return []
 
-#function
+#function for geolocation requesting to yelp api
     def get_businesses_by_coords(self, latitude, longitude):
         url = f"https://api.yelp.com/v3/businesses/search?term=dog+friendly&open_now=true&sort_by=distance&latitude={latitude}&longitude={longitude}"
         headers = {"accept": "application/json", "Authorization": f"Bearer {API_KEY}"}
@@ -172,7 +172,7 @@ class App:
     def contact(self):
         return render_template("contact.html")
 
-#function
+#function takes user input from contact form and submits it into the database
     def submit_contact(self):
         name = request.form['name']
         email = request.form['email']

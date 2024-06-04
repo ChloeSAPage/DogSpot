@@ -12,6 +12,7 @@ class App {
         });
     }
 
+    //event listener logic for the navigation buttons and connected to corresponding html pages
     setupNavButtons() {
         const navButtons = document.querySelectorAll('.nav-button');
         navButtons.forEach((button, index) => {
@@ -41,6 +42,7 @@ class App {
         window.location.href = url;
     }
 
+    //for the element 'contact-page' it adds a event listener to submit event, it also validates the user input in this form.
     setupFormSubmission() {
         const contactForm = document.getElementById('contact-form');
         if (contactForm) {
@@ -58,6 +60,7 @@ class App {
             });
         }
 
+        // 
         const searchButton = document.querySelector('.search-button');
         if (searchButton) {
             searchButton.addEventListener('click', () => {
@@ -65,6 +68,7 @@ class App {
             });
         }
 
+        //
         const locationButton = document.querySelector('.location-button');
         if (locationButton) {
             locationButton.addEventListener('click', () => {
@@ -74,6 +78,7 @@ class App {
         }
     }
 
+    //client side retrieves geolocation from user's browser
     getLocation() {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(this.submitLocation.bind(this));
@@ -82,6 +87,7 @@ class App {
         }
     }
 
+    //from user's geolocation takes lat and long and passes it to the element 'search-form' as hidden input and sets currentlocation used to true
     submitLocation(position) {
         const lat = position.coords.latitude;
         const lon = position.coords.longitude;
@@ -101,6 +107,7 @@ class App {
         form.submit();
     }
 
+    //reusable function that takes name and value and returns it as invisible.
     createHiddenInput(name, value) {
         const input = document.createElement('input');
         input.type = 'hidden';
@@ -109,14 +116,16 @@ class App {
         return input;
     }
 
+    //allows functions to be used anywhere in the application such as other files
     exposeGlobalFunctions() {
         window.showMoreInfo = App.showMoreInfo;
         window.initMap = App.initMap;
         window.getDirections = App.getDirections;
         window.submitSearch = App.submitSearch;
-        window.getLocation = this.getLocation.bind(this); // Ensure this method is accessible globally
+        window.getLocation = this.getLocation.bind(this); 
     }
 
+    //this function is used to display more information about a business and either show directions to it or initialize a map based on the current location used
     static showMoreInfo(businessId, latitude, longitude, currentLocationUsed) {
         const lat = parseFloat(latitude);
         const lng = parseFloat(longitude);
@@ -141,6 +150,7 @@ class App {
         }
     }
 
+    // this function sets up a Google map centered on a business location and marked by a pin. uses the business’s ID to create a unique map element for each business result
     static initMap(businessId, latitude, longitude) {
         const businessLocation = { lat: latitude, lng: longitude };
         const map = new google.maps.Map(document.getElementById('map-' + businessId), {
@@ -153,6 +163,7 @@ class App {
         });
     }
 
+    // this function provides the user with directions from their current location to the business's location on google maps
     static getDirections(businessId, businessLat, businessLng) {
         const directionsService = new google.maps.DirectionsService();
         const directionsRenderer = new google.maps.DirectionsRenderer();
@@ -188,6 +199,7 @@ class App {
         }
     }
 
+    //this function handles the search submission process by taking the text from a clicked element, setting it as the search query, and submitting the form
     static submitSearch(element) {
         const location = element.textContent || element.innerText;
         console.log('Clicked on:', location);
@@ -199,5 +211,5 @@ class App {
     }
 }
 
-// Initialize the app
+
 new App();
