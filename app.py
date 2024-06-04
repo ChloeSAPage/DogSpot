@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, session, redirect, url_for, flash
-import requests
 from config import API_KEY
 from database import get_db_connection
+from yelpApi import YelpAPI
 import logging
 
 app = Flask(__name__)
@@ -15,6 +15,7 @@ class App:
         self.app = app
         if test_config:
             self.app.config.update(test_config)
+        self.yelp_api = YelpAPI(API_KEY)
         self.setup_routes()
 
     def setup_routes(self):
@@ -53,7 +54,7 @@ class App:
                 lat = request.form['latitude']
                 lon = request.form['longitude']
                 current_location_used = request.form.get('currentLocationUsed', 'false')
-                businesses = self.get_businesses_by_coords(lat, lon)
+                businesses = self.yelp_api.get_businesses_by_coords(lat, lon)
             elif 'location' in request.form:
                 location = request.form['location']
                 connection = get_db_connection()
@@ -65,7 +66,7 @@ class App:
                 connection.commit()
                 cursor.close()
                 connection.close()
-                businesses = self.get_businesses(location)
+                businesses = self.yelp_api.get_businesses(location)
         
         recent_searches = []
         connection = get_db_connection()
@@ -144,30 +145,6 @@ class App:
     def signout(self):
         session.clear()
         return redirect(url_for('index'))
-
-#function for user inputted location requested to yelp api
-    def get_businesses(self, location):
-        url = f"https://api.yelp.com/v3/businesses/search?term=dog+friendly&open_now=true&sort_by=distance&location={location}"
-        headers = {"accept": "application/json", "Authorization": f"Bearer {API_KEY}"}
-        response = requests.get(url, headers=headers)
-        result = response.json()
-        if 'businesses' in result:
-            return result['businesses']
-        else:
-            print("Error: 'businesses' key not found in the response.")
-            return []
-
-#function for geolocation requesting to yelp api
-    def get_businesses_by_coords(self, latitude, longitude):
-        url = f"https://api.yelp.com/v3/businesses/search?term=dog+friendly&open_now=true&sort_by=distance&latitude={latitude}&longitude={longitude}"
-        headers = {"accept": "application/json", "Authorization": f"Bearer {API_KEY}"}
-        response = requests.get(url, headers=headers)
-        result = response.json()
-        if 'businesses' in result:
-            return result['businesses']
-        else:
-            print("Error: 'businesses' key not found in the response.")
-            return []
 
     def contact(self):
         return render_template("contact.html")

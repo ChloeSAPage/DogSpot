@@ -2439,3 +2439,209 @@ INFO:werkzeug:[33mPress CTRL+C to quit[0m
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 659-292-916
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 659-292-916
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 23:02:13] "[32mGET /explore HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 23:02:13] "GET /signin HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 23:02:13] "[36mGET /static/css/signin.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 23:02:13] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 23:02:13] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+DEBUG:mysql.connector:Building SSL context
+DEBUG:mysql.connector:Switching to SSL
+DEBUG:mysql.connector:SSL has been enabled
+DEBUG:mysql.connector:Starting authorization phase
+DEBUG:mysql.connector:The provided initial strategy is caching_sha2_password
+INFO:mysql.connector:package: mysql.connector.plugins
+INFO:mysql.connector:plugin_name: caching_sha2_password
+INFO:mysql.connector:AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+DEBUG:mysql.connector:Exchanging further packets
+DEBUG:mysql.connector:caching_sha2_password completed succesfully
+DEBUG:root:Connected to the database
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 23:02:17] "[32mPOST /submit-signin HTTP/1.1[0m" 302 -
+DEBUG:mysql.connector:Building SSL context
+DEBUG:mysql.connector:Switching to SSL
+DEBUG:mysql.connector:SSL has been enabled
+DEBUG:mysql.connector:Starting authorization phase
+DEBUG:mysql.connector:The provided initial strategy is caching_sha2_password
+DEBUG:mysql.connector:Exchanging further packets
+DEBUG:mysql.connector:caching_sha2_password completed succesfully
+DEBUG:root:Connected to the database
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 23:02:17] "GET /explore HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 23:02:17] "[36mGET /static/css/explore.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 23:02:17] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 23:02:17] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+DEBUG:mysql.connector:Building SSL context
+DEBUG:mysql.connector:Switching to SSL
+DEBUG:mysql.connector:SSL has been enabled
+DEBUG:mysql.connector:Starting authorization phase
+DEBUG:mysql.connector:The provided initial strategy is caching_sha2_password
+DEBUG:mysql.connector:Exchanging further packets
+DEBUG:mysql.connector:caching_sha2_password completed succesfully
+DEBUG:root:Connected to the database
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 23:02:20] "[35m[1mPOST /explore HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 23:02:20] "[36mGET /explore?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 23:02:20] "[36mGET /explore?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 23:02:21] "[36mGET /explore?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 23:02:21] "[36mGET /explore?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 659-292-916
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 659-292-916
+DEBUG:mysql.connector:Building SSL context
+DEBUG:mysql.connector:Switching to SSL
+DEBUG:mysql.connector:SSL has been enabled
+DEBUG:mysql.connector:Starting authorization phase
+DEBUG:mysql.connector:The provided initial strategy is caching_sha2_password
+INFO:mysql.connector:package: mysql.connector.plugins
+INFO:mysql.connector:plugin_name: caching_sha2_password
+INFO:mysql.connector:AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+DEBUG:mysql.connector:Exchanging further packets
+DEBUG:mysql.connector:caching_sha2_password completed succesfully
+DEBUG:root:Connected to the database
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 23:05:40] "[35m[1mPOST /explore HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 23:05:40] "[36mGET /explore?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 23:05:40] "[36mGET /explore?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 23:05:40] "[36mGET /explore?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 23:05:40] "[36mGET /explore?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 659-292-916
+DEBUG:mysql.connector:Building SSL context
+DEBUG:mysql.connector:Switching to SSL
+DEBUG:mysql.connector:SSL has been enabled
+DEBUG:mysql.connector:Starting authorization phase
+DEBUG:mysql.connector:The provided initial strategy is caching_sha2_password
+INFO:mysql.connector:package: mysql.connector.plugins
+INFO:mysql.connector:plugin_name: caching_sha2_password
+INFO:mysql.connector:AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+DEBUG:mysql.connector:Exchanging further packets
+DEBUG:mysql.connector:caching_sha2_password completed succesfully
+DEBUG:root:Connected to the database
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 23:06:53] "[35m[1mPOST /explore HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 23:06:53] "[36mGET /explore?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 23:06:53] "[36mGET /explore?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 23:06:53] "[36mGET /explore?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 23:06:53] "[36mGET /explore?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 659-292-916
+DEBUG:mysql.connector:Building SSL context
+DEBUG:mysql.connector:Switching to SSL
+DEBUG:mysql.connector:SSL has been enabled
+DEBUG:mysql.connector:Starting authorization phase
+DEBUG:mysql.connector:The provided initial strategy is caching_sha2_password
+INFO:mysql.connector:package: mysql.connector.plugins
+INFO:mysql.connector:plugin_name: caching_sha2_password
+INFO:mysql.connector:AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+DEBUG:mysql.connector:Exchanging further packets
+DEBUG:mysql.connector:caching_sha2_password completed succesfully
+DEBUG:root:Connected to the database
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 23:13:16] "GET /explore HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 23:13:16] "[36mGET /static/css/explore.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 23:13:16] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 23:13:16] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+DEBUG:mysql.connector:Building SSL context
+DEBUG:mysql.connector:Switching to SSL
+DEBUG:mysql.connector:SSL has been enabled
+DEBUG:mysql.connector:Starting authorization phase
+DEBUG:mysql.connector:The provided initial strategy is caching_sha2_password
+DEBUG:mysql.connector:Exchanging further packets
+DEBUG:mysql.connector:caching_sha2_password completed succesfully
+DEBUG:root:Connected to the database
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.yelp.com:443
+DEBUG:urllib3.connectionpool:https://api.yelp.com:443 "GET /v3/businesses/search?location=london&term=Dogs+Friendly&open_now=true&sort_by=distance HTTP/1.1" 200 None
+DEBUG:mysql.connector:Building SSL context
+DEBUG:mysql.connector:Switching to SSL
+DEBUG:mysql.connector:SSL has been enabled
+DEBUG:mysql.connector:Starting authorization phase
+DEBUG:mysql.connector:The provided initial strategy is caching_sha2_password
+DEBUG:mysql.connector:Exchanging further packets
+DEBUG:mysql.connector:caching_sha2_password completed succesfully
+DEBUG:root:Connected to the database
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 23:13:19] "POST /explore HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 23:13:19] "[36mGET /static/css/explore.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 23:13:19] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 23:13:19] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.yelp.com:443
+DEBUG:urllib3.connectionpool:https://api.yelp.com:443 "GET /v3/businesses/search?latitude=51.5178496&longitude=-2.5100288&term=Dogs+Friendly&open_now=true&sort_by=distance HTTP/1.1" 200 None
+DEBUG:mysql.connector:Building SSL context
+DEBUG:mysql.connector:Switching to SSL
+DEBUG:mysql.connector:SSL has been enabled
+DEBUG:mysql.connector:Starting authorization phase
+DEBUG:mysql.connector:The provided initial strategy is caching_sha2_password
+DEBUG:mysql.connector:Exchanging further packets
+DEBUG:mysql.connector:caching_sha2_password completed succesfully
+DEBUG:root:Connected to the database
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 23:13:22] "POST /explore HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 23:13:22] "[36mGET /static/css/explore.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 23:13:22] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 23:13:22] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 23:13:26] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 23:13:26] "[36mGET /static/css/homepage.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 23:13:26] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 23:13:26] "[36mGET /static/images/dogpagehome.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 23:13:26] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 23:13:27] "GET /contact HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 23:13:27] "[36mGET /static/css/contact.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 23:13:27] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 23:13:27] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+DEBUG:mysql.connector:Building SSL context
+DEBUG:mysql.connector:Switching to SSL
+DEBUG:mysql.connector:SSL has been enabled
+DEBUG:mysql.connector:Starting authorization phase
+DEBUG:mysql.connector:The provided initial strategy is caching_sha2_password
+DEBUG:mysql.connector:Exchanging further packets
+DEBUG:mysql.connector:caching_sha2_password completed succesfully
+DEBUG:root:Connected to the database
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 23:13:29] "GET /explore HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 23:13:29] "[36mGET /static/css/explore.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 23:13:29] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 23:13:29] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+DEBUG:mysql.connector:Building SSL context
+DEBUG:mysql.connector:Switching to SSL
+DEBUG:mysql.connector:SSL has been enabled
+DEBUG:mysql.connector:Starting authorization phase
+DEBUG:mysql.connector:The provided initial strategy is caching_sha2_password
+DEBUG:mysql.connector:Exchanging further packets
+DEBUG:mysql.connector:caching_sha2_password completed succesfully
+DEBUG:root:Connected to the database
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.yelp.com:443
+DEBUG:urllib3.connectionpool:https://api.yelp.com:443 "GET /v3/businesses/search?location=london&term=Dogs+Friendly&open_now=true&sort_by=distance HTTP/1.1" 200 None
+DEBUG:mysql.connector:Building SSL context
+DEBUG:mysql.connector:Switching to SSL
+DEBUG:mysql.connector:SSL has been enabled
+DEBUG:mysql.connector:Starting authorization phase
+DEBUG:mysql.connector:The provided initial strategy is caching_sha2_password
+DEBUG:mysql.connector:Exchanging further packets
+DEBUG:mysql.connector:caching_sha2_password completed succesfully
+DEBUG:root:Connected to the database
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 23:13:31] "POST /explore HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 23:13:31] "[36mGET /static/css/explore.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 23:13:31] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 23:13:31] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Adeli\\Desktop\\CFG_Software_2_Group_6\\tests\\test_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 659-292-916
+INFO:werkzeug: * Detected change in 'C:\\Users\\Adeli\\Desktop\\CFG_Software_2_Group_6\\tests\\test_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 659-292-916
