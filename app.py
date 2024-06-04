@@ -10,6 +10,7 @@ app.secret_key = 'your_secret_key'  # Replace with a strong secret key
 logging.basicConfig(filename='app.log', level=logging.ERROR)
 
 class App:
+# functions to configure the test for /tests/test_app.py 
     def __init__(self, test_config=None):
         self.app = app
         if test_config:
@@ -35,9 +36,11 @@ class App:
         if not self.app.view_functions.get('submit_contact'):
             self.app.add_url_rule("/submit-contact", view_func=self.submit_contact, methods=["POST"])
 
+
     def index(self):
         return render_template("homepage.html")
 
+#function 
     def explore(self):
         businesses = []
         current_location_used = 'false'
@@ -80,10 +83,11 @@ class App:
         cursor.close()
         connection.close()
         return render_template("explore.html", businesses=businesses, currentLocationUsed=current_location_used, recent_searches=recent_searches)
-
+    
     def signin(self):
         return render_template("signin.html")
 
+#function
     def submit_signin(self):
         username = request.form['username']
         password = request.form['password']
@@ -107,6 +111,7 @@ class App:
                 cursor.close()
                 connection.close()
 
+#function
     def submit_signup(self):
         username = request.form['username']
         password = request.form['password']
@@ -140,6 +145,7 @@ class App:
         session.clear()
         return redirect(url_for('index'))
 
+#function
     def get_businesses(self, location):
         url = f"https://api.yelp.com/v3/businesses/search?term=dog+friendly&open_now=true&sort_by=distance&location={location}"
         headers = {"accept": "application/json", "Authorization": f"Bearer {API_KEY}"}
@@ -151,6 +157,7 @@ class App:
             print("Error: 'businesses' key not found in the response.")
             return []
 
+#function
     def get_businesses_by_coords(self, latitude, longitude):
         url = f"https://api.yelp.com/v3/businesses/search?term=dog+friendly&open_now=true&sort_by=distance&latitude={latitude}&longitude={longitude}"
         headers = {"accept": "application/json", "Authorization": f"Bearer {API_KEY}"}
@@ -165,6 +172,7 @@ class App:
     def contact(self):
         return render_template("contact.html")
 
+#function
     def submit_contact(self):
         name = request.form['name']
         email = request.form['email']
