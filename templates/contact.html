@@ -1,22 +1,29 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="static/css/contact.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
-    <title>Contact Us - DogSpot</title>
+    <title>Explore</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtJwk9xl-hJbQzKirQ5JZZvbsVy2Q9P6E&callback=initMap"
+        async defer></script>
 </head>
 
 <body>
     <header class="header">
         <img src="static/images/logo.png" alt="Logo" class="logo">
         <div class="button-bar">
+            {% if session['username'] %}
+            <p class="welcome-message">Welcome, {{ session['username'] }}!</p>
+            <form action="/signout" method="post">
+                <button class="nav-button" id="signout-button">Sign out</button>
+            </form>
+            {% else %}
+            <button class="nav-button" id="signin-button">Sign in</button>
+            {% endif %}
             <button class="nav-button" id="home-button">Home</button>
             <button class="nav-button" id="explore-button">Explore</button>
             <button class="nav-button" id="contact-button">Contact</button>
-            <button class="nav-button" id="signin-button">Sign in</button>
         </div>
     </header>
     <div class="content-container">

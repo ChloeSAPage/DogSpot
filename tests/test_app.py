@@ -1,28 +1,180 @@
-import pytest
-from app import app
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-@pytest.fixture
-def client():
-    app.config['TESTING'] = True
-    with app.test_client() as client:
-        yield client
+import unittest
+from unittest.mock import patch, Mock
+from app import App
 
-def test_home(client):
-    response = client.get('/')
-    assert response.status_code == 200
-    assert b"Home" in response.data  # Assuming your home page contains the word "Home"
+class TestGetBusinesses(unittest.TestCase):
 
-def test_explore(client):
-    response = client.get('/explore')
-    assert response.status_code == 200
-    assert b"Explore" in response.data  # Assuming your explore page contains the word "Explore"
+    @classmethod
+    def setUpClass(cls):
+        cls.app_instance = App()
+        cls.client = cls.app_instance.app.test_client()
 
-def test_contact(client):
-    response = client.get('/contact')
-    assert response.status_code == 200
-    assert b"Contact" in response.data  # Assuming your contact page contains the word "Contact"
+    @patch('app.requests.get')
+    def test_response_is_list(self, mock_get):
+        mock_response = Mock()
+        mock_response.json.return_value = {'businesses': []}
+        mock_get.return_value = mock_response
 
-def test_signin(client):
-    response = client.get('/signin')
-    assert response.status_code == 200
-    assert b"Sign in" in response.data  # Assuming your sign-in page contains the words "Sign in"
+        response = self.app_instance.get_businesses('london')
+        self.assertIsInstance(response, list)
+
+    @patch('app.requests.get')
+    def test_response_contains_dict(self, mock_get):
+        mock_response = Mock()
+        mock_response.json.return_value = {'businesses': [{}]}
+        mock_get.return_value = mock_response
+
+        response = self.app_instance.get_businesses('london')
+        self.assertIsInstance(response[0], dict)
+
+    @patch('app.requests.get')
+    def test_no_input(self, mock_get):
+        mock_response = Mock()
+        mock_response.json.return_value = {'businesses': []}
+        mock_get.return_value = mock_response
+
+        response = self.app_instance.get_businesses('')
+        self.assertIsInstance(response, list)
+
+    @patch('app.requests.get')
+    def test_strange_input(self, mock_get):
+        mock_response = Mock()
+        mock_response.json.return_value = {'businesses': []}
+        mock_get.return_value = mock_response
+
+        response = self.app_instance.get_businesses('pineapple')
+        self.assertIsInstance(response, list)
+
+    @patch('app.requests.get')
+    def test_api_error(self, mock_get):
+        mock_response = Mock()
+        mock_response.status_code = 500
+        mock_response.json.return_value = {'error': 'API error'}
+        mock_get.return_value = mock_response
+
+        response = self.app_instance.get_businesses('london')
+        self.assertEqual(response, [])
+
+    @patch('app.requests.get')
+    def test_empty_response(self, mock_get):
+        mock_response = Mock()
+        mock_response.json.return_value = {'businesses': []}
+        mock_get.return_value = mock_response
+
+        response = self.app_instance.get_businesses('london')
+        self.assertEqual(response, [])
+
+    @patch('app.requests.get')
+    def test_no_businesses_key(self, mock_get):
+        mock_response = Mock()
+        mock_response.json.return_value = {}
+        mock_get.return_value = mock_response
+
+        response = self.app_instance.get_businesses('london')
+        self.assertEqual(response, [])
+
+
+class TestGetBusinessesByCoords(unittest.TestCase):
+
+    @classmethod
+    def setUpClass(cls):
+        cls.app_instance = App()
+        cls.client = cls.app_instance.app.test_client()
+
+    @patch('app.requests.get')
+    def test_response_is_list(self, mock_get):
+        mock_response = Mock()
+        mock_response.json.return_value = {'businesses': []}
+        mock_get.return_value = mock_response
+
+        response = self.app_instance.get_businesses_by_coords(51.51283552118349, -0.135955810546875)
+        self.assertIsInstance(response, list)
+
+    @patch('app.requests.get')
+    def test_response_contains_dict(self, mock_get):
+        mock_response = Mock()
+        mock_response.json.return_value = {'businesses': [{}]}
+        mock_get.return_value = mock_response
+
+        response = self.app_instance.get_businesses_by_coords(51.51283552118349, -0.135955810546875)
+        self.assertIsInstance(response[0], dict)
+
+    @patch('app.requests.get')
+    def test_wrong_lat_long(self, mock_get):
+        mock_response = Mock()
+        mock_response.json.return_value = {'businesses': []}
+        mock_get.return_value = mock_response
+
+        response = self.app_instance.get_businesses_by_coords(-0.135955810546875, 51.51283552118349)
+        self.assertIsInstance(response, list)
+
+    @patch('app.requests.get')
+    def test_string_input(self, mock_get):
+        mock_response = Mock()
+        mock_response.json.return_value = {'businesses': []}
+        mock_get.return_value = mock_response
+
+        response = self.app_instance.get_businesses_by_coords("", "")
+        self.assertIsInstance(response, list)
+
+    @patch('app.requests.get')
+    def test_char_input(self, mock_get):
+        mock_response = Mock()
+        mock_response.json.return_value = {'businesses': []}
+        mock_get.return_value = mock_response
+
+        response = self.app_instance.get_businesses_by_coords("long", "lat")
+        self.assertIsInstance(response, list)
+
+    @patch('app.requests.get')
+    def test_out_of_range_input(self, mock_get):
+        mock_response = Mock()
+        mock_response.json.return_value = {'businesses': []}
+        mock_get.return_value = mock_response
+
+        response = self.app_instance.get_businesses_by_coords(500, 500)
+        self.assertIsInstance(response, list)
+
+    @patch('app.requests.get')
+    def test_invalid_lat_long(self, mock_get):
+        mock_response = Mock()
+        mock_response.json.return_value = {'error': 'Invalid coordinates'}
+        mock_get.return_value = mock_response
+
+        response = self.app_instance.get_businesses_by_coords("invalid_lat", "invalid_long")
+        self.assertEqual(response, [])
+
+    @patch('app.requests.get')
+    def test_api_error(self, mock_get):
+        mock_response = Mock()
+        mock_response.status_code = 500
+        mock_response.json.return_value = {'error': 'API error'}
+        mock_get.return_value = mock_response
+
+        response = self.app_instance.get_businesses_by_coords(51.51283552118349, -0.135955810546875)
+        self.assertEqual(response, [])
+
+    @patch('app.requests.get')
+    def test_empty_response(self, mock_get):
+        mock_response = Mock()
+        mock_response.json.return_value = {'businesses': []}
+        mock_get.return_value = mock_response
+
+        response = self.app_instance.get_businesses_by_coords(51.51283552118349, -0.135955810546875)
+        self.assertEqual(response, [])
+
+    @patch('app.requests.get')
+    def test_no_businesses_key(self, mock_get):
+        mock_response = Mock()
+        mock_response.json.return_value = {}
+        mock_get.return_value = mock_response
+
+        response = self.app_instance.get_businesses_by_coords(51.51283552118349, -0.135955810546875)
+        self.assertEqual(response, [])
+
+if __name__ == '__main__':
+    unittest.main()

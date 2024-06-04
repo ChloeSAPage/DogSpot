@@ -1655,3 +1655,60 @@ INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 02:17:35] "POST /explore HTTP/1.1" 200 
 INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 02:17:35] "[36mGET /static/css/explore.css HTTP/1.1[0m" 304 -
 INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 02:17:35] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
 INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 02:17:35] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Adeli\\Desktop\\CFG_Software_2_Group_6\\tests\\test_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 659-292-916
+INFO:werkzeug: * Detected change in 'C:\\Users\\Adeli\\Desktop\\CFG_Software_2_Group_6\\tests\\test_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 659-292-916
+INFO:werkzeug: * Detected change in 'C:\\Users\\Adeli\\Desktop\\CFG_Software_2_Group_6\\tests\\test_script.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 659-292-916
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.yelp.com:443
+DEBUG:urllib3.connectionpool:https://api.yelp.com:443 "GET /v3/businesses/search?term=dog+friendly&open_now=true&sort_by=distance&latitude=51.5178496&longitude=-2.5100288 HTTP/1.1" 200 None
+DEBUG:mysql.connector:Building SSL context
+DEBUG:mysql.connector:Switching to SSL
+DEBUG:mysql.connector:SSL has been enabled
+DEBUG:mysql.connector:Starting authorization phase
+DEBUG:mysql.connector:The provided initial strategy is caching_sha2_password
+INFO:mysql.connector:package: mysql.connector.plugins
+INFO:mysql.connector:plugin_name: caching_sha2_password
+INFO:mysql.connector:AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+DEBUG:mysql.connector:Exchanging further packets
+DEBUG:mysql.connector:caching_sha2_password completed succesfully
+DEBUG:root:Connected to the database
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 03:17:11] "POST /explore HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 03:17:11] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 03:17:11] "[36mGET /static/css/explore.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 03:17:11] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 03:17:15] "GET /contact HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 03:17:15] "[36mGET /static/css/contact.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 03:17:15] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 03:17:15] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 659-292-916
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 03:17:48] "GET /contact HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 03:17:48] "[36mGET /static/css/contact.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 03:17:48] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 03:17:48] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 659-292-916
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 03:18:28] "GET /contact HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 03:18:28] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 03:18:28] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2024 03:18:28] "GET /static/css/contact.css HTTP/1.1" 200 -
