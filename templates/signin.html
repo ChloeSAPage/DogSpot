@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,24 +9,26 @@
 <header class="header">
     <img src="static/images/logo.png" alt="Logo" class="logo">
     <div class="button-bar">
-        <button class="nav-button" id="home-button">Home</button>
-        <button class="nav-button" id="explore-button">Explore</button>
-        <button class="nav-button" id="contact-button">Contact</button>
         {% if session['username'] %}
+        <p class="welcome-message">Welcome, {{ session['username'] }}!</p>
         <form action="/signout" method="post">
             <button class="nav-button" id="signout-button">Sign out</button>
         </form>
-    {% else %}
-    <button class="nav-button" id="signin-button">Sign in</button>
-    {% endif %}
+        {% else %}
+        <button class="nav-button" id="signin-button">Sign in</button>
+        {% endif %}
+        <button class="nav-button" id="home-button">Home</button>
+        <button class="nav-button" id="explore-button">Explore</button>
+        <button class="nav-button" id="contact-button">Contact</button>
     </div>
 </header>
+
 <body>
     {% if session['username'] %}
-        <p>Welcome, {{ session['username'] }}!</p>
-        <form action="/signout" method="post">
-            <button type="submit">Sign Out</button>
-        </form>
+    <p>Welcome, {{ session['username'] }}!</p>
+    <form action="/signout" method="post">
+        <button type="submit">Sign Out</button>
+    </form>
     {% else %}
     <div class="signin-container" id="signin-container">
         <h1>Sign In</h1>
@@ -61,7 +64,8 @@
     </div>
     <div class="signin-message-container" id="signin-message-container" style="display: none;">
         <p id="signin-message"></p>
-    </div>    {% endif %}
+    </div> {% endif %}
     <script src="static/js/script.js"></script>
 </body>
+
 </html>
