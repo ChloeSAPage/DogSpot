@@ -35,18 +35,21 @@ and reading basic guides on python. this then developed a passion and made me lo
 &nbsp;
 <details>
 <summary> About Chloe</summary>
-...add summary...
+Hiya! I'm Chloe.
+
 
 ---
 
 Facts about me:
 
-... insert facts about you ...
+- I really like birds.
+- I enjoy hiking.
+- I like playing video games, and have been playing League of Legends for way too long.
 
 <details>
   <summary> My Tech journey </summary>
 
-... insert tech journey summary ...
+I did my degree in Microbiology, and during that time I did one coding project. When I graduated and entered the working world, I realised I didn't really enjoy the practical work of a laboratory, so I decided to take up some Python courses which lead me here!
 
 
 </details>
