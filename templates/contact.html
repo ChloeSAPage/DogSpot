@@ -1,25 +1,35 @@
-<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="static/css/contact.css">
-    <title>Contact Us - DogSpot</title>
+    <title>Explore</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtJwk9xl-hJbQzKirQ5JZZvbsVy2Q9P6E&callback=initMap"
+        async defer></script>
 </head>
+
 <body>
     <header class="header">
         <img src="static/images/logo.png" alt="Logo" class="logo">
         <div class="button-bar">
+            {% if session['username'] %}
+            <p class="welcome-message">Welcome, {{ session['username'] }}!</p>
+            <form action="/signout" method="post">
+                <button class="nav-button" id="signout-button">Sign out</button>
+            </form>
+            {% else %}
+            <button class="nav-button" id="signin-button">Sign in</button>
+            {% endif %}
             <button class="nav-button" id="home-button">Home</button>
             <button class="nav-button" id="explore-button">Explore</button>
             <button class="nav-button" id="contact-button">Contact</button>
-            <button class="nav-button" id="signin-button">Sign in</button>
         </div>
     </header>
     <div class="content-container">
         <h1>Contact Us</h1>
         <p>Enter your details and message below.</p>
-        <form id="contact-form">
+        <form id="contact-form" method="POST" action="/submit-contact">
             <div class="form-group">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
@@ -35,6 +45,18 @@
             <button type="submit" class="submit-button">Submit</button>
         </form>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <script src="static/js/script.js"></script>
+    <script>
+        const messages = {{ get_flashed_messages(with_categories = true) | tojson | safe }};
+        console.log('Flashed messages:', messages);  // Add this line to log the messages
+        messages.forEach(message => {
+            const category = message[0];
+            const text = message[1];
+            toastr[category](text);
+        });
+    </script>
 </body>
+
 </html>

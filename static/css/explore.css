@@ -1,4 +1,4 @@
-/* General body styling */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -7,7 +7,6 @@ body {
     text-align: center;
 }
 
-/* Header styling */
 .header {
     background-color: #493944;
     padding: 10px 10px;
@@ -24,6 +23,7 @@ body {
 .button-bar {
     display: flex;
     gap: 10px;
+    align-items: center; 
 }
 
 .nav-button {
@@ -35,8 +35,16 @@ body {
     border: none;
     border-radius: 5px;
 }
+.welcome-message {
+    font-family: Arial, sans-serif;
+    font-size: 1em; 
+    line-height: 40px; 
+    color: #c6edf3;
+}
+form {
+    margin-block-end: 0em;
+}
 
-/* Search form styling */
 .search-form {
     margin: 20px 0;
     display: flex;
@@ -61,6 +69,7 @@ body {
     border: none;
     border-radius: 5px;
 }
+
 .location-button {
     padding: 10px 20px;
     font-size: 1em;
@@ -70,7 +79,32 @@ body {
     border: none;
     border-radius: 5px;
 }
-/* Results container styling */
+
+.recent-searches-container {
+    background-color: #fff;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    max-width: 300px;
+    margin: 20px auto;
+}
+
+#recent-searches-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    text-align: center;
+}
+
+#recent-searches-list li {
+    margin: 0px 0;
+}
+
+#recent-searches-list li a:hover {
+    text-decoration: underline;
+}
+
 .results-container {
     display: flex;
     flex-direction: column;
@@ -79,10 +113,9 @@ body {
     padding: 20px;
 }
 
-/* Business bubble styling */
 .business-bubble {
     background-color: white;
-    border-radius: 50px; /* Round edges for the bubble effect */
+    border-radius: 50px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
@@ -106,7 +139,7 @@ body {
     width: 100px;
     height: 100px;
     object-fit: cover;
-    border-radius: 50%; /* Make the image round to fit the bubble theme */
+    border-radius: 50%;
     margin-right: 20px;
 }
 
@@ -136,7 +169,24 @@ body {
     margin: 5px 0;
 }
 
-/* Responsive design for smaller screens */
+.business-details-container {
+    display: none;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+    text-align: left;
+    width: 100%;
+    max-width: 800px;
+}
+
+.map-container {
+    height: 300px;
+    width: 100%;
+}
+
+/* design for smaller screens */
 @media (max-width: 600px) {
     .business-bubble {
         flex-direction: column;
