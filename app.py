@@ -10,7 +10,7 @@ app.secret_key = 'your_secret_key'  # Replace with a strong secret key
 logging.basicConfig(filename='app.log', level=logging.ERROR)
 
 class App:
-# functions to configure the test for /tests/test_app.py 
+# functions to configure the test for /tests/test_app.py
     def __init__(self, test_config=None):
         self.app = app
         if test_config:
@@ -67,7 +67,7 @@ class App:
                 cursor.close()
                 connection.close()
                 businesses = self.yelp_api.get_businesses(location)
-        
+
         recent_searches = []
         connection = get_db_connection()
         cursor = connection.cursor(dictionary=True)
@@ -84,7 +84,7 @@ class App:
         cursor.close()
         connection.close()
         return render_template("explore.html", businesses=businesses, currentLocationUsed=current_location_used, recent_searches=recent_searches)
-    
+
     def signin(self):
         return render_template("signin.html")
 
@@ -126,13 +126,13 @@ class App:
                 (username, password, email)
             )
             connection.commit()
-            
+
             cursor.execute("SELECT * FROM Users_table WHERE username = %s", (username,))
             user = cursor.fetchone()
-            
+
             session['username'] = username
             session['user_id'] = user[0]
-            
+
             return redirect(url_for('explore'))
         except connection.Error as error:
             print(f"There was an error connecting to MySQL: {error}")
