@@ -76,18 +76,22 @@ Facts about me:
 &nbsp;
 <details>
 <summary> About Jessica</summary>
-...add summary...
+Hi, my name is Jessica and I'm a student on the CFG Degree specialising in software engineering.
+
 
 ---
 
 Facts about me:
 
-... insert facts about you ...
+- I love playing and watching sports, especially football.
+- I enjoy binging netflix shows and watching new films at the cinema.
+- I enjoy trying new restaurants with friends.
+
 
 <details>
   <summary> My Tech journey </summary>
 
-... insert tech journey summary ...
+I studied Accounting & Finance at uni, but after beginning my first full-time job I realised I was interested in taking on more technical work and so I started to teach myself to code. I discovered Code First Girls and completed the 8-week SQL course which I loved. This then led me to apply to the nano degree to continue my coding journey and I am hoping this will lead me to my first job as a software engineer.
 
 
 </details>
@@ -115,7 +119,14 @@ Facts about me:
 
 ## About our project
 
-...why we made this project...
+The primary aim of our project was to create a user-friendly website to help dog owners find dog-friendly locations. The platform addresses the growing need for reliable information about places where dogs are welcome, allowing owners to include their furry friends in their daily activities and travels.
+
+We have created a search functionality that allows users to find dog-friendly locations based on a given location. We integrated the Yelp API to provide the dog-friendly establishments with additional information such as reviews, opening hours and contact hours. We also integrated the Google Maps API to provide the user with directions to their chosen location.
+
+The inspiration for this project stemmed from the noticeable increase in dog ownership during the COVID-19 pandemic. With many individuals working from home or being furloughed, people looked towards dog adoption for companionship. However, more recently the world has returned to normalcy and lots of people have busy schedules. This has resulted in a struggle between balancing dog care with daily responsibilities. There is a growing need for solutions that enable dog owners to integrate their dogs into their lifestyle.
+
+Our website aims to provide a solution to this problem by providing users with dog-friendly locations. The website has a simple user interface that is easy to use to ensure a seamless user experience. This solution encourages responsible dog ownership as well as mitigating issues related to dog abandonment by making it easier for dog owners to include their dogs in their activities.
+
 
 ### Built with
 [![Languages used](https://skillicons.dev/icons?i=js,html,css,python,flask,mysql,git&perline=20)](https://skillicons.dev)
@@ -174,7 +185,7 @@ database="pet_friendly_database"
 ```
 
 ### 4. Create your database 
-to do this you need to make sure your config file has your sql login details, then all thats needed to do is run the `database.py` file, this should create the database and the necessary data tables needed to run this app.
+To do this you need to make sure your config file has your sql login details, then all thats needed to do is run the `database.py` file, this should create the database and the necessary data tables needed to run this app.
 
 > [!WARNING]
 > **Make sure the config has the correct details otherwise the database will not be created. this will cause issues running the app**
