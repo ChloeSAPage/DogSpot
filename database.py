@@ -1,6 +1,7 @@
 import mysql.connector
 from mysql.connector import Error
 import logging
+from config import host, user, password, database
 
 logging.basicConfig(filename='app.log', level=logging.DEBUG)  # Set to DEBUG to capture more detailed logs
 
@@ -13,7 +14,7 @@ class DatabaseConnectionError(Exception):
         super().__init__(message)
 
 class Database:
-    def __init__(self, host="localhost", user="newuser", password="new_password", database="pet_friendly_database"):
+    def __init__(self):
         self.host = host
         self.user = user
         self.password = password
@@ -25,19 +26,32 @@ class Database:
             self.connection = mysql.connector.connect(
                 host=self.host,
                 user=self.user,
-                password=self.password,
-                database=self.database
+                password=self.password
             )
-            logging.debug("Connected to the database")
+            logging.debug("Connected to MySQL server")
             return self.connection
         except Error as error:
             logging.error(f"The server could not connect to MySQL due to {error}")
-            raise DatabaseConnectionError("Could not connect to the database")
+            raise DatabaseConnectionError("Could not connect to the MySQL server")
 
     def close(self):
         if self.connection:
             self.connection.close()
             logging.debug("Database connection closed")
+
+    def create_database(self):
+        try:
+            cursor = self.connection.cursor()
+            cursor.execute(f"CREATE DATABASE IF NOT EXISTS {self.database}")
+            logging.debug(f"Database `{self.database}` created or already exists")
+            cursor.execute(f"USE {self.database}")
+            logging.debug(f"Using database `{self.database}`")
+        except Error as error:
+            logging.error(f"Error creating or selecting the database: {error}")
+            raise DatabaseInsertionError("The database could not be created or selected")
+        finally:
+            if cursor:
+                cursor.close()
 
     def create_tables(self):
         try:
@@ -100,12 +114,22 @@ class Database:
                 cursor.close()
 
 def get_db_connection():
-    db = Database()
-    return db.connect()
-
+        try:
+            connection = mysql.connector.connect(
+                host=host,
+                user=user,
+                password=password,
+                database=database
+            )
+            logging.debug("Connected to MySQL server")
+            return connection
+        except Error as error:
+            logging.error(f"The server could not connect to MySQL due to {error}")
+            raise DatabaseConnectionError("Could not connect to the MySQL server")
 def main():
     db = Database()
     db.connect()
+    db.create_database()
     db.create_tables()
     db.close()
     print('done')
