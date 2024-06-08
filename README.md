@@ -127,9 +127,6 @@ Facts about me:
 ---
 
 ## Installing and How To Use This Project
----
-
-## Getting Started
 
 This application is _not_ hosted and thus will need to be installed on your local machine.
 
@@ -157,33 +154,38 @@ git clone https://github.com/WhatIsEllie/CFG_Software_2_Group_6.git
 pip install -r requirements.txt
 ```
 
-### 3. Edit the config.py file in the root directory and add your yelp API key and your Google Maps API key.
+### 3. Edit the config.py file in the root directory and add your yelp API key, Google Maps API key and your MYSQL credentials.
 
 > [!WARNING]
 > **The file should be formatted as such, with the appropriate details. Otherwise it will _not_ work**
 
 ```
-API_KEY = "" (for the yelp API key)
-GMAP_API_KEY ="" (for google maps api key)
+# yelp api key
+API_KEY = "" 
+
+# google maps api key
+GMAP_API_KEY ="" 
+
+#mysql credentials
+host=""
+user=""
+password=""
+database="pet_friendly_database"
 ```
 
-### 4. Manually create a DB using MYSQL Workbench. 
-to do this log into your workbench with your credentials and run the following command below (or alternatively run the file `DB_SETUP.sql` in your workbench)
-```
-CREATE DATABASE pet_friendly_database;
-USE pet_friendly_database
-```
-Once the database has been created and in use, run the `database.py` file to populate the database with tables, (you can double check if these have been created by refreshing the schemas tab)
+### 4. Create your database 
+to do this you need to make sure your config file has your sql login details, then all thats needed to do is run the `database.py` file, this should create the database and the necessary data tables needed to run this app.
 
 > [!WARNING]
-> Use the supplied code above or from the `DB_SETUP.sql` file to manually create the MySQL database for this app. **A DB will _not_ be automatically created**
+> **Make sure the config has the correct details otherwise the database will not be created. this will cause issues running the app**
 
 ### 5. Run
 
 > [!CAUTION]
 > Running the files in a different order may cause issues, please use `app.log` to debug further.
 
-1. Run app.py
-2. Go to this address in your browser if you are localhosting `http://127.0.0.1:5000` refer to link in `app.log` otherwise.
-3. Use the app
+1. Make sure all the above steps above have been followed.
+2. Run `app.py`
+3. Go to this address in your browser if you are localhosting `http://127.0.0.1:5000` refer to link in `app.log` otherwise.
+5. Use the app
 

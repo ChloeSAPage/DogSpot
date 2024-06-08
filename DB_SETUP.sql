@@ -1,2 +1,0 @@
-CREATE DATABASE pet_friendly_database;
-USE pet_friendly_database
