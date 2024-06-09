@@ -99,18 +99,20 @@ I studied Accounting & Finance at uni, but after beginning my first full-time jo
 &nbsp;
 <details>
 <summary> About Ellie</summary>
-...add summary...
+Hi, I'm Ellie 👋 I'm a student on the CFG Degree doing the software engineering stream.
 
 ---
 
 Facts about me:
 
-... insert facts about you ...
+- In my free time I snowboard and play roller derby
+- I have a pet cat called Maggie
+- I love gaming and have a fully pink gaming set up
 
 <details>
   <summary> My Tech journey </summary>
 
-... insert tech journey summary ...
+I studied data science at univeristy and have been working as a data analyst for the last two and a half years. I have a bit of tech background from both my studies and my career, and spend a lot of my day writing SQL and retrieving and cleaning data from APIs using Python. However, I have a real passion for the software engineering side of things from all the way back at college so have really enjoyed learning more on the CFG Degree. I hope to move into a career in software engineering! 
 
 
 </details>
