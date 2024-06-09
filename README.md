@@ -57,19 +57,19 @@ I did my degree in Microbiology, and during that time I did one coding project. 
 &nbsp;
 <details>
 <summary> About Yasmin</summary>
-...add
+Hi, I'm Yasmin and I'm a student on the Spring '24 Software CFGdegree Programme.
 
 ---
 
 Facts about me:
 
-... insert facts about you ...
+- I love anything to do with fitness, expecially running and CrossFit
+- I did my degree in Chemistry, and used to work as a Chemical Analyst
+- I love animals, and I have a Pomeranian called Benji!
 
 <details>
   <summary> My Tech journey </summary>
-
-... insert tech journey summary ...
-
+I work in an ed-tech company and discuss technical concepts everday at work, but never fully knew what they meant. I tried a few of the CFG classes and loved them, so decided to take the plunge and do the CFGdegree to expand my knowledge and help me gain a better understanding of the world of tech!
 
 </details>
 </details>
