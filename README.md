@@ -2,6 +2,8 @@
 
 #### *Discover Dog Friendly Adventures.*
 
+![image](https://github.com/ChloeSAPage/DogSpot/assets/135153095/dbcdbf1a-0489-4075-96e0-7ec352813619)
+
 ---
 
 ## The Team:
